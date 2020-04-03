@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="./scss/style.css">
     <title>My Blog</title>
@@ -24,9 +23,9 @@
             <div class="list-menu">
                 <ul>
                     <li><a href="./index.html">Trang chủ</a></li>
-                    <li><a href="#">Javascript</a></li>
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="./sccStyle.html">CSS</a></li>
+                    <li><a href="htmlStyle.html">HTML</a></li>
+                    <li><a style="color: #FF843E;" href="./sccStyle.html">CSS</a></li>
+                    <li><a href="jsStyle.html">Javascript</a></li>
                     <li><a href="#">Thư viện</a>
                         <ul class="sub-menu">
                             <li><a href="#">Bootstrap</a></li>
@@ -51,19 +50,227 @@
                 
                   <div class="menu-icon"><i class="fas fa-bars"></i></div>
             </div>
-          
         </header>
-    
     </div>
 
-    <section id="content-css">
+
+
+    <div class="d-flex flex-wrap css-main">
+
+        <!-- content -->
+        <div class="css-content">
+            <div class="css-header">
+                <div class="css-header--title">
+                    <h2>CSS là gì? Học CSS như thế nào?</h2>
+                    <div class="css-header--sub-content">
+                        <p class="time">31/03/2020 - Quang Hà</p>
+                    </div>
+                </div>
+                <img src="./image/css/hoc-lap-trinh-css-1024x576.jpg" alt="">
+            </div>
+            <div id="khai-niem" class="container-fluid" >
+                <h4><a href="#collapse-1" data-toggle="collapse">I. Khái niệm </a></h4>
+                <div id="collapse-1" class="collapse show">
+                    <p>CSS là ngôn ngữ tạo phong cách cho trang web – Cascading Style Sheet language. Nó dùng để tạo phong cách và định kiểu cho những yếu tố được viết dưới dạng ngôn ngữ đánh dấu, như là HTML. Nó có thể điều khiển định dạng của nhiều trang web cùng lúc để tiết kiệm công sức cho người viết web. Nó phân biệt cách hiển thị của trang web với nội dung chính của trang bằng cách điều khiển bố cục, màu sắc, và font chữ.</p>
+                    <p>Mối tương quan giữa HTML và CSS rất mật thiết. HTML là ngôn ngữ markup (nền tảng của site) và CSS định hình phong cách (tất cả những gì tạo nên giao diện website), chúng là không thể tách rời.</p>
+                    <p>CSS về lý thuyết không có cũng được, nhưng khi đó website sẽ không chỉ là một trang chứa văn bản mà không có gì khác.</p>
+                </div>
+            </div>
+            <div id="hoat-dong" class="container-fluid" >
+                <h4><a href="#collapse-2" data-toggle="collapse">II. CSS hoạt động như thế nào?</a></h4>
+                <div id="collapse-2" class="collapse">
+                    <p>Ví dụ: để chọn tất cả các phần tử đoạn trên trang HTML và chuyển văn bản trong đó màu đỏ, bạn sẽ viết CSS này:</p>
+                <div class="setting-css-1">
+                    <div class="number">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                    </div>
+                    <div class="value">
+                        <p> <span style="color: green;">p</span> {</p>
+                        <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">color </span>: red ; </p>
+                        <p>}</p>
+                    </div>
+                </div>
+                <p style="margin-top: 20px;">Chúng ta hãy kiểm tra nó:  dán ba dòng CSS này vào một tập tin trong chương trình hiệu chỉnh văn bản của bạn, sau đó lưu tập tin với tên là style.css trong thư mục styles của bạn.</p>
+                <p>Nhưng chúng ta vẫn cần nhúng CSS vào tài liệu HTML của bạn. Nếu không, các định dạng CSS sẽ không ảnh hưởng đến các trình duyệt của bạn hiển thị tài liệu HTML.</p>
+
+                <div class="setting-css-2">
+                    <p>1. Mở tập tin index.html và dán dòng bên dưới vào đâu đó trên đầu tập tin </p>
+
+                   <span class="value-style" style=" display:inline-block; width: 95%;; padding: 20px 0 ; margin-bottom: 20px;"> <span><span style="padding-left: 20px; border-right: 1px solid; padding-right: 20px; ">1</span > <span style="padding-left: 20px;"><</span><span style="color: rgb(148, 27, 27);">link</span> <span style="color: green;"><span style="color: green;">href</span></span>="<span style="color: blue;">styles/style.css</span> " <span style="color: blue;"><span style="color: green;">rel</span>="<span style="color: blue;">stylesheet</span></span> " <span style="color: green;">type</span>="<span style="color: blue;">text/css"></span> </span></span>
+                    
+                    <p>2. Lưu tập tin index.html và tải nó vào trong trình duyệt của bạn. Bạn sẽ thấy như thế này:</p>
+                    <img src="./image/website-screenshot-styled.png" alt="">
+                </div>
+
+                <div id="co-cau" class="container-fluid" >
+                    <h5>1. Cơ cấu bộ quy tắc CSS</h5>
+                    <p>Hãy xem CSS ở trên chi tiết hơn một chút:</p>
+                    <img src="./image/css-declaration-small.png" alt="">
+                    <p>Toàn bộ cấu trúc được gọi là một <b> bộ quy tắc</b> (nhưng thường gọi là "quy tắc" cho ngắn gọn). Cũng lưu ý tên của từng phần riêng:</p>
+                    <p><b>Bộ chọn (Selector): </b>Tên phần tử HTML bắt đầu của bộ quy tắc. Nó chọn (các) phần tử được tạo kiểu (trong trường hợp này là phần tử p). Để tạo kiểu cho một phần tử khác, chỉ cần thay đổi bộ chọn.</p>
+                    <p><b>Tuyên bố (Declaration): </b>Một quy tắc duy nhất như: color: red; xác định thuộc tính của phần tử nào bạn muốn tạo kiểu.</p>
+                    <p><b>Thuộc tính (Properties): </b>Những cách mà bạn có thể tạo kiểu cho một phần tử HTML. (Trong trường hợp này, color là một thuộc tính của phần tử <p>.) Trong CSS, bạn chọn thuộc tính nào bạn muốn tác động trong quy tắc của mình.</p>
+                    <p><b>Giá trị thuộc tính: </b>Ở bên phải của thuộc tính sau dấu hai chấm(:), chúng ta có giá trị thuộc tính, mà chọn một trong số nhiều lần xuất hiện có thể cho một thuộc tính cụ thể (color có rất nhiều giá trị ngoài red).</p>
+                    <p>Vì vậy, để thay đổi nhiều giá trị thuộc tính cùng lúc, bạn chỉ cần viết chúng bằng dấu chấm phẩy, như sau:</p>
+                    <div class="setting-css-1" style="margin-bottom: 20px;">
+                        <div class="number">
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                            <p>5</p>
+                        </div>
+                        <div class="value">
+                            <p> <span style="color: green;">p</span> {</p>
+                            <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">color </span>: red ; </p>
+                            <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">width </span>: 500px ; </p>
+                            <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">border </span>: 1px solid black; </p>
+                            <p>}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div id="chon-nhieu-phan-tu" class="container-fluid" >
+                    <h5>2. Chọn nhiều phần tử</h5>
+                    <p>Bạn cũng có thể chọn nhiều kiểu phần tử và áp dụng một quy tắc duy nhất được đặt cho tất cả các yếu tố đó. Bao gồm nhiều bộ chọn được phân biệt bởi dấu phẩy (,). Ví dụ:</p>
+                    <div class="setting-css-1" style="margin-bottom: 20px;">
+                        <div class="number">
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                        </div>
+                        <div class="value">
+                            <p> <span style="color: green;">p, li, h1</span> {</p>
+                            <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">color </span>: red ; </p>
+                            <p>}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div id="phong-chu-va-van-ban" class="container-fluid" >
+                <h4><a href="#collapse-3" data-toggle="collapse">III. Phông chữ và văn bản</a> </h4>
+                <div id="collapse-3" class="collapse">
+                    <p>Bây giờ chúng ta khám phá một số khái niệm cơ bản về CSS, hãy bắt đầu thêm một quy tắc và thông tin khác vào tệp style.css của chúng ta để làm cho ví dụ trông đẹp hơn. Hãy bắt đầu bằng cách nhập phông chữ và văn bản của chúng ta để trông đẹp hơn một chút.</p>
+                <p>Trước hết, quay lại và tìm nguồn từ Phông chữ Google mà bạn đã được lưu trữ ở đâu đó an toàn. Thềm phần tử <link> vào đâu đó bên trong trên đầu index.html. nó sẽ giống như thế này:</p>
+                <span class="value-style" style=" display:inline-block; width: 95%;; padding: 20px 0 ; margin-bottom: 20px;"> <span><span style="padding-left: 20px; border-right: 1px solid; padding-right: 20px; ">1</span > <span style="padding-left: 20px;"><</span><span style="color: rgb(148, 27, 27);">link</span> <span style="color: green;"><span style="color: green;">href</span></span>="<span style="color: blue;">'https://fonts.googleapis.com/css?family=Open+Sans'</span> " <span style="color: blue;"><span style="color: green;">rel</span>="<span style="color: blue;">stylesheet</span></span>"  </span>></span>
+                <p>Kế tiếp, xóa quy tắc hiện tại bạn có trong tệp style.css. Nó là một thử nghiệm tốt, nhưng văn bản màu đỏ trông không thực sự tốt.</p>
+                <p>Thêm các dòng sau vào vị trí của nó, thay thế dòng trình giữ chổ hiện tại bằng dòng font-family mà bạn nhận được từ Phông chữ Google. (font-family có nghĩa là (các) phông chữ bạn muốn sử dụng cho văn bản của mình.) Quy tắc này trước tiên đặt phông chữ cơ sở chung và kích thước phông chữ cho toàn bộ trang (vì <html> là phần tử gốc của toàn bộ trang và tất cả phần tử bên trong nó thừa hưởng cùng một font-size và font-family):</p>
+                <div class="setting-css-1" style="margin-bottom: 20px;">
+                    <div class="number">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                    </div>
+                    <div class="value">
+                        <p> <span style="color: green;">html </span> {</p>
+                        <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">font-size </span>: 10px ; </p>
+                        <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">font-family </span>: <span style="color: chocolate;">'Open Sans'</span>, sans-serif; </p>
+                        <p>}</p>
+                        
+                    </div>
+                </div>
+                <p>Bây giờ, mình sẽ đặt kích thước phông chữ cho các phần tử chứa văn bản bên trong nội dung HTML (<span><</span>h1>, <span><</span>li>, và <span><</span>p>). Mình sẽ tập trung vào văn bản của tiêu đề và một số thiết lập về chiều cao dòng và khoản cách chữ của nội dung phần thân để làm cho nó dễ đọc hơn một chút:</p>
+                    <div class="setting-css-1" style="margin-bottom: 20px;">
+                        <div class="number">
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                            <p>5</p>
+                            <p>6</p>
+                            <p>7</p>
+                            <p>8</p>
+                            <p>9</p>
+                            <p>10</p>
+
+                        </div>
+                        <div class="value">
+                            <p> <span style="color: green;">h1</span> {</p>
+                            <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">font-size </span>: 60px ; </p>
+                            <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">text-align </span>: center ; </p>
+                            <p>}</p>
+                            <p><br></p>
+                            <p> <span style="color: green;">p, li</span> {</p>
+                                <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">font-size </span>: 16px ; </p>
+                                <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">line-height </span>: 2 ; </p>
+                                <p style="margin-left: 50px;"><span style="color: rgb(148, 27, 27);">letter-spacing </span>: 1px ; </p>
+                                <p>}</p>
+                        </div>
+                        
+                    </div>
+                    <img src="./image/website-screenshot-font-small.png" alt="">
+                </div>
+
+            </div>
+
+            <div id="loi-ket" class="container-fluid" >
+                <h4><a href="#collapse" type="button" data-toggle="collapse"  class="active">IV. Lời kết</a> </h4>
+                <div id="collapse" class="collapse show">
+                    <p>Trên đây là khái niệm cơ bản của CSS, và một vài thuộc tính thường xuyên sử dụng. Mình đã cung cấp một khóa học cơ bản về CSS hoàn toàn miễn phí, bạn hoàn toàn có thể tìm hiểu thêm.</p>
+                    <p>Cuối cùng, mình hy vọng bạn thấy bài viết này hữu dụng để biết được CSS là gì. Nếu có bất kỳ thắc mắc nào cứ để lại bình luận bên dưới.</p>
+                </div>
+
+            </div>
+
+            <button class="btn-more" type="button" style="margin-right: 40px;">Bài tiếp theo... <i class="fas fa-angle-double-right"></i></button>
+        </div>
         
-    </section>
+        <!-- side bar -->
+        <div class="css-sidebar">
+            <div class="css-sidebar--list-menu">
+                <h3>Các bài viết</h3>
+                <ul>
+                    <li><a href="./sccStyle.html">CSS là gì? Học CSS như thế nào?</a></li>
+                    <li><a href="#">Cú pháp CSS - các cách viết CSS</a></li>
+                    <li><a href="#">Selector là gì? Tìm hiểu CSS Selector căn bản</a></li>
+                    <li><a href="#">Thiết lập màu nền với CSS background</a></li>
+                    <li><a href="#">Tìm hiểu về color trong CSS</a></li>
+                    <li><a href="#">Tìm hiểu về font trong CSS</a></li>
+                    <li><a href="#">Tìm hiểu về border trong CSS</a></li>
+                    
+                </ul>
+            </div>
+    
+            <div class="css-navigation navbar ">
+                <h3>Danh mục bài viết</h3>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#khai-niem">Khái niệm</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#hoat-dong" href="#collapse-3"  data-toggle="">Hoạt động</a>
+                      <ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#co-cau">Cơ cấu</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#chon-nhieu-phan-tu">Chọn nhiều phần tử</a>
+                          </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#phong-chu-va-van-ban" >Phông chữ và văn bản</a>
+                    </li>
+               
+                    <li class="nav-item">
+                        <a class="nav-link" href="#loi-ket">Lời kết</a>
+                      </li>
+                    
+                  </ul>
+            </div>
+    
+        </div>
+    </div>
 
-
-
-  
-
+    
+   
     <footer>
         <div class="contact">
             <div class="quote">
@@ -89,11 +296,11 @@
                 <div class="col-sm-4 navigation-link">
                   <h4>DANH MỤC</h4>
                   <ul>
-                    <li><a href="#">Khái niệm</a></li>
+                    <li><a href="#">Điều khoản</a></li>
                     <li><a href="#">Giới thiệu</a></li>
                     <li><a href="#">Khóa học</a></li>
                     <li><a href="#">Đối tác</a></li>
-                    <li><a href="#">Điều khoản</a></li>
+                    
                   </ul>
                 </div>
         
@@ -108,11 +315,13 @@
                     <li class="gh"><i class="fab fa-github col-sm-6"></i></li>
                     <li class="instg"><i class="fab fa-instagram col-sm-6"></i></li>
                   </ul>
-
              </div>
-            
         </div> 
+
     </footer>
+    <div class="copy-right">
+        <h6>© 2020 Copyright Lập Trình Không Dễ</h6>
+    </div>
 
     <script src="./js/main.js"></script>
 </body>
