@@ -242,6 +242,12 @@ header .menu-icon {
   text-align: center;
 }
 
+.about-us img {
+  padding-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .about-us .hong-son {
   top: -30%;
   color: #dadbe0;
@@ -855,8 +861,8 @@ h6 {
   header .logo img {
     background-size: cover;
   }
-  header .showing {
-    max-height: 20em;
+  header .showing ul li {
+    display: block;
   }
   header .menu-icon {
     display: block;
@@ -872,6 +878,12 @@ h6 {
   }
   .content .html-description button {
     margin: 0 auto !important;
+  }
+}
+
+@media screen and (max-width: 895px) {
+  .html-sidebar, .css-sidebar, .js-sidebar {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

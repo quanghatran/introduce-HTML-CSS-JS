@@ -233,6 +233,11 @@ header {
         
     }
 
+    img {
+        padding-top: 20px;
+        box-sizing: border-box;
+    }
+
     .hong-son {
         top: -30%;
         color: #dadbe0;
@@ -751,7 +756,11 @@ h6 {
         }
 
         .showing {
-            max-height: 20em;
+            ul {
+                li {
+                    display: block;
+                }
+            }
         }
         .menu-icon {
             display: block;
@@ -776,5 +785,11 @@ h6 {
                 margin: 0 auto !important;
             }
         }
+    }
+}
+
+@media screen and (max-width:895px) {
+    .html-sidebar, .css-sidebar, .js-sidebar {
+        display: none;
     }
 }
