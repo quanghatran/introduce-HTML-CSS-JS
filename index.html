@@ -14,13 +14,15 @@
     <title>My Blog</title>
 </head>
 <body>
-    <div class="wrapper">
+    <section class="wrapper">
         <header>
             <div class="logo">
-                <p>LẬP TRÌNH</p>
-                <img src="./image/mdn-info2.png" alt="logo" width="60px">
-                <P>KHÔNG DỄ</P>
+               
+                <img src="image/logo-ideal.png" alt="First Step" width="55px" >
+                <p> IDEA  <i class="fas fa-exclamation"></i></p>
+
             </div>
+            
             <div class="list-menu">
                 <ul>
                     <li><a style="color: #FF843E;" href="./index.html">Trang chủ</a></li>
@@ -52,26 +54,141 @@
                   <div class="menu-icon"><i class="fas fa-bars"></i></div>
             </div>
           
-            <div class="banner"><img src="./image/cut.jpg" alt="" ></div>
+            <section class="banner">
+                <h1 class="slogan">
+                    Luyện Tập - Thử Thách - Không Ngại Khó
+                </h1>
+                <div class="btn">
+                    <a href="#contact">Liên hệ tư vấn</a>
+                    <a href="#newsletter">Tìm hiểu thêm</a>
+                </div>
+            </section>
         </header>
     
     </div>
 
     <div class="title">
-        <h4><strong>Lựa Chọn Khóa học</strong></h4>
+        <h4><strong>Bài Viết Mới Nhất </strong></h4>
+        <span> </span>
+    </div>
+
+    <section class="newsletter" id="newsletter">
+
+            <div class="item item-1">
+                <div class="item-image-wrapper">
+                   <a href="introduction.html">
+                    <div class="item-image">
+
+                    </div>
+                   </a>
+                </div>
+                <div class="item-title">
+                    <a href="introduction.html">Vai trò HTML, CSS và JavaScript trong việc xây dựng website </a>
+                    <p>HTML, CSS và Javascript là bộ 3 ngôn ngữ cần thiết cho mọi web developer... </p>
+                </div>
+            </div>
+
+            <div class="item item-2">
+                <div class="item-image-wrapper">
+                    <a href="htmlStyle.html">
+                        <div class="item-image">
+
+                        </div>
+                    </a>
+                </div>
+                <div class="item-title">
+                    <a href="htmlStyle.html">HTML là gì? Vì sao nó quan trọng?</a>
+                    <p>HTML là chữ viết tắt của cụm từ HyperText Markup Language được sử dụng để tạo một trang web...</p>
+                </div>
+            </div>
+
+            <div class="item item-3">
+                <div class="item-image-wrapper">
+                    <a href="sccStyle.html">
+                        <div class="item-image">
+
+                        </div>
+                    </a>
+                </div>
+                <div class="item-title ">
+                    <a href="sccStyle.html">CSS là gì? Học CSS như thế nào?</a>
+                    <p>CSS là ngôn ngữ tạo phong cách cho trang web – Cascading Style Sheet language.</p>
+                    
+                </div>
+            </div>
+
+            <div class="item item-4">
+                <div class="item-image-wrapper">
+                    <a href="jsStyle.html">
+                        <div class="item-image">
+
+                        </div>
+                    </a>
+                </div>
+                <div class="item-title">
+                    
+                    <a href="jsStyle.html">JavaScript là gì?</a>
+                    <p>JavaScript là một ngôn ngữ lập trình website, được tích hợp và nhúng trong HTML giúp website sống động hơn.</p>
+                </div>
+            </div>
+
+            <div class="item item-5">
+                <div class="item-image-wrapper">
+                    <a href="#">
+                        <div class="item-image">
+
+                        </div>
+                    </a>
+                </div>
+                <div class="item-title">
+                    <a href="#">Mối liên hệ giữa HTML, CSS và JavaScript</a>
+                    <p>Lập trình HTML, CSS hay JavaScript là một trong những mã hóa không thể thiếu để tạo ra một trang web. Nhưng vai trò và nhiệm vụ của chúng là gì?</p>
+                </div>
+            </div>
+
+            <div class="item item-6">
+                <div class="item-image-wrapper">
+                    <a href="#">
+                        <div class="item-image">
+
+                        </div>
+                    </a>
+                </div>
+                <div class="item-title">
+                    <a href="#">SCSS là gì? Khác nhau giữa CSS và SASS</a>
+                    <p>Có rất nhiều CSS Preprocessor như SASS, LESS, Stylus.... Tuy nhiên trong khuôn khổ bài viết này, mình sẽ giới thiệu bạn về SASS.</p>
+                </div>
+            </div>
+
+            
+
+    </section>
+
+    <section >
+        <div class="nav">
+            <h2><button><a href="#"> 1 </a></button></h2>
+            <h2><button><a href="#"> 2 </a></button></h2>
+            <h2><button><a href="#"> 3 </a></button></h2>
+            <p><b> . . . </b></p>
+            <h2><button><a href="#"> END </a></button></h2>
+          </div>
+    </section>
+
+    <div class="title">
+        <h4><strong>Bài Viết Theo Chủ Đề</strong></h4>
         <span> </span>
     </div>
     <section class="content">
         
         <div class="html row">
             <div class="img-html col-sm-6">
-                <a href="htmlStyle.html"><img src="./image/html/html-la-gi.jpg" alt=""></a>
+               <img src="./image/html/html-la-gi.jpg" alt="">
             </div>
             <div class="html-description col-sm-6 ">
                 <a href="htmlStyle.html"><h2>Hướng dẫn HTML</h2></a>
-                <p><li>HTML viết tắt của Hypertext Markup Language là ngôn ngữ lập trình dùng để xây dựng và cấu trúc lại các thành phần có trong website.</li> </p>
-                <p><li>HTML không phải là ngôn ngữ lập trình, html là ngôn ngữ đánh dấu (markup language), ngôn ngữ đánh dấu là một nhóm các thẻ đánh dấu (các tag), HTML sử dụng các thẻ này để mô tả trang web.</li></p>
-                <button type="button">Bắt đầu khóa học</button>
+                <p><i class="fas fa-feather-alt"> </i> HTML viết tắt của Hypertext Markup Language là ngôn ngữ lập trình dùng để xây dựng và cấu trúc lại các thành phần có trong website.</p>
+                <p><i class="fas fa-feather-alt"> </i> HTML không phải là ngôn ngữ lập trình, html là ngôn ngữ đánh dấu (markup language), ngôn ngữ đánh dấu là một nhóm các thẻ đánh dấu (các tag), HTML sử dụng các thẻ này để mô tả trang web.</p>
+                <button type="button">Tìm hiểu thêm  <i class="fas fa-paper-plane"></i></button>
             </div>
             <div>
                 
@@ -84,9 +201,9 @@
             </div>
             <div class="html-description col-sm-6 ">
                 <a href="sccStyle.html"><h2>Hướng dẫn CSS</h2></a>
-                <p><li>CSS là ngôn ngữ tạo phong cách cho trang web – Cascading Style Sheet language.</li></p>
-                <p><li>CSS Nó dùng để tạo phong cách và định kiểu cho những yếu tố được viết dưới dạng ngôn ngữ đánh dấu, như là HTML. Nó có thể điều khiển định dạng của nhiều trang web cùng lúc để tiết kiệm công sức cho người viết web.</li></p>
-                <button type="button">Bắt đầu khóa học</button>
+                <p><i class="fas fa-feather-alt"></i> CSS là ngôn ngữ tạo phong cách cho trang web – Cascading Style Sheet language.</p>
+                <p><i class="fas fa-feather-alt"></i> CSS Nó dùng để tạo phong cách và định kiểu cho những yếu tố được viết dưới dạng ngôn ngữ đánh dấu, như là HTML. Nó có thể điều khiển định dạng của nhiều trang web cùng lúc để tiết kiệm công sức cho người viết web.</p>
+                <button type="button">Tìm hiểu thêm  <i class="fas fa-paper-plane"></i></button>
             </div>
             <div>
             </div>
@@ -98,9 +215,9 @@
             </div>
             <div class="html-description col-sm-6 ">
                 <a href="jsStyle.html"><h2>Hướng dẫn Javascript</h2></a>
-                <p><li>CSS là ngôn ngữ tạo phong cách cho trang web – Cascading Style Sheet language.</li></p>
-                <p><li>CSS Nó dùng để tạo phong cách và định kiểu cho những yếu tố được viết dưới dạng ngôn ngữ đánh dấu, như là HTML. Nó có thể điều khiển định dạng của nhiều trang web cùng lúc để tiết kiệm công sức cho người viết web.</li></p>
-                <button type="button">Bắt đầu khóa học</button>
+                <p><i class="fas fa-feather-alt"></i> JavaScript là một ngôn ngữ gia thêm khả năng tương tác cho website của bạn (ví dụ: trò chơi, các phản hồi khi các nút được nhấn hoặc nhập dữ liệu trên form, kiểu động, hoạt họa). </p>
+                <p><i class="fas fa-feather-alt"></i> JavaScript thật sự rất linh hoạt. Bạn có thể bắt đầu với các bước nhỏ, với thư viện ảnh, bố cục có tính thay đổi và phản hồi đến các nút nhấn. Khi có nhiều kinh nghiệm hơn, bạn có thể tạo ra các trò chơi, hoạt họa 2D hoặc 3D, ứng dụng cơ sở dữ liệu toàn diện và nhiều thứ khác!</p>
+                <button type="button">Tìm hiểu thêm <i class="fas fa-paper-plane"></i></button>
             </div>
             <div>
                 
@@ -113,15 +230,15 @@
             </div>
             <div class="html-description col-sm-6 ">
                 <a href="#"><h2>Hướng dẫn SASS</h2></a>
-                <p><li>CSS Preprocessors là ngôn ngữ tiền xử lý CSS. Nó có công dụng sẽ gi úp bạn viết một cú pháp CSS gần nhau với một ngôn ngữ lập trình rồi compile nó ra CSS thuần.</li></p>
-                <p><li>SASS (Syntactically Awesome StyleSheets) là một CSS Preprocessor giúp bạn viết CSS nhanh hơn và có cấu trúc rõ ràng hơn. Với SASS, bạn có thể viết CSS theo thứ tự rõ ràng, quản lý các biến đã được định nghĩa sẵn, các class dùng chung hay có thể tự động nén tập tin CSS lại để bạn tiết kiệm dung lượng.</li></p>
-                <button type="button">Bắt đầu khóa học</button>
+                <p><i class="fas fa-feather-alt"></i> CSS Preprocessors là ngôn ngữ tiền xử lý CSS. Nó có công dụng sẽ gi úp bạn viết một cú pháp CSS gần nhau với một ngôn ngữ lập trình rồi compile nó ra CSS thuần.</p>
+                <p><i class="fas fa-feather-alt"></i> SASS (Syntactically Awesome StyleSheets) là một CSS Preprocessor giúp bạn viết CSS nhanh hơn và có cấu trúc rõ ràng hơn. Với SASS, bạn có thể viết CSS theo thứ tự rõ ràng, quản lý các biến đã được định nghĩa sẵn, các class dùng chung hay có thể tự động nén tập tin CSS lại để bạn tiết kiệm dung lượng.</p>
+                <button type="button">Tìm hiểu thêm  <i class="fas fa-paper-plane"></i></button>
             </div>
             <div>
                 
             </div>
         </div>
-        <button class="btn-more" type="button">Còn nữa... <i class="fas fa-angle-double-right"></i></button>
+        <a class="btn-more" type="button">Còn nữa... <i class="fas fa-angle-double-right"></i></a>
     </section>
 
     <section class="newsletter">
@@ -184,16 +301,30 @@
         </div>
     </section>
 
-
-
-
-
+    <!--popup-->
+   <section class="popup">
+    <button class="open-button" onclick="openForm()"><img src="image/logo-message.png" alt="message" width="60px"></button>
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Thắc mắc?</h1>
+      
+          <label for="email"><b>Nhập câu hỏi</b></label>
+          <input type="text" placeholder="Câu hỏi..." name="email" required>
+      
+          <label for="psw"><b>Email</b></label>
+          <input type="password" placeholder="Email..." name="psw" required>
+      
+          <button type="submit" class="btn">Phản hồi</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
+        </form>
+      </div>
+   </section>
 
 
     <footer>
-        <div class="contact">
+        <div class="contact" id="contact">
             <div class="quote">
-                <h2>Đăng ký Emal</h2>
+                <h2>Đăng ký Email</h2>
                 <p>Để không bỏ lỡ bất kỳ bài viết mới nhất nào</p>
             </div>
             <div class="input-field">
@@ -205,8 +336,8 @@
             <div class="footer-content row">
                 <div class="col-sm-4 introduce">
                     <div class="logo">
-                        <a href="#"><img src="./image/mdn-info2.png" alt="logo" width="60px"></a>
-                        <h2>LẬP TRÌNH KHÔNG DỄ</h2>
+                        <a href="#"><img src="./image/logo-ideal.png" alt="logo" width="60px"></a>
+                        <h2>IDEA <i class="fas fa-exclamation"></i></h2>
                     </div>
                     <br>
                     <p>Chủ blog là một lão làng có tiếng trong ngành với gần một tháng kinh nghiệm làm việc, hi vọng những kiến thức chuyên sâu qua những bài viết sẽ giúp độc giả có một cái nhìn khái quát về ngành lập trình!</p>
@@ -225,7 +356,8 @@
         
                 <div class="col-sm-4 social-media">
                   <h4>LIÊN KẾT</h4>
-                  <ul>
+                  <div>
+                      <ul>
                       <li class="fb"><i class="fab fa-facebook col-sm-6"></i></li>
                       <li class="yt"><i class="fab fa-youtube col-sm-6"></i></li>
                   </ul>
@@ -234,13 +366,16 @@
                     <li class="gh"><i class="fab fa-github col-sm-6"></i></li>
                     <li class="instg"><i class="fab fa-instagram col-sm-6"></i></li>
                   </ul>
+                  </div>
              </div>
         </div> 
 
     </footer>
     <div class="copy-right">
-        <h6>© 2020 Copyright Lập Trình Không Dễ</h6>
+        <h6>© 2020 Copyright Lập Trình Không Dễ - Design By Quang Ha</h6>
     </div>
+
+    
 
     <script src="./js/main.js"></script>
 </body>

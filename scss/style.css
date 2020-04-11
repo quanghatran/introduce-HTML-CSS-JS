@@ -3,7 +3,12 @@ html, body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
-  background: #f4f4f4f4;
+  background: #535c68;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 header {
@@ -11,42 +16,54 @@ header {
 }
 
 header .logo {
-  background: #2880b3;
+  background: none;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 10px;
-  margin-left: 30px;
+  margin-left: 80px;
   padding: 2px 6px;
   border-radius: 15px;
   cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  -webkit-box-shadow: 5px 5px 5px #000;
-          box-shadow: 5px 5px 5px #000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .logo img {
+  -webkit-transition: 0.3;
+  transition: 0.3;
 }
 
 header .logo p {
   margin-top: 15px;
-  font-size: 15px;
+  font-size: 25px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #fff;
+  margin-left: 10px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
-header .logo:hover {
-  background: #0d5668;
+header .logo:hover p {
+  color: #FF843E;
+}
+
+header .logo:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 header .list-menu {
   display: block;
   font-size: 18px;
+  z-index: 6;
 }
 
 header .list-menu ul {
   list-style: none;
   text-align: center;
-  background: #34495e;
+  background: #2d3436;
   padding: 15px 0;
   margin: 0;
   height: 85px;
@@ -58,7 +75,9 @@ header .list-menu ul li {
   height: 50px;
   line-height: 50px;
   position: relative;
-  text-shadow: 10px 10px 10px #1b1919;
+  font-weight: 500;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 header .list-menu ul li a {
@@ -71,6 +90,7 @@ header .list-menu ul li a:hover {
 }
 
 header .list-menu ul li .sub-menu {
+  z-index: 2;
   text-align: center;
   display: none;
   position: absolute;
@@ -90,22 +110,70 @@ header .list-menu .input-field {
 
 header .list-menu .input-field input {
   border: none;
+  background: #fff;
+  color: #000;
 }
 
 header .list-menu .input-field button {
   border: none;
   margin-left: -5px;
   color: #34495e;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 header .list-menu .input-field button:hover {
   color: #FF843E;
 }
 
-header .banner img {
+header .banner {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(83, 92, 104, 0.4))), url(../image/banner-1.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(83, 92, 104, 0.4)), url(../image/banner-1.jpg);
   width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position-y: 0%;
+  background-attachment: fixed;
+  background-position: right;
+}
+
+header .banner h1 {
+  position: absolute;
+  left: 24%;
+  top: 32%;
+  font-size: 240%;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 3px 3px 5px #000;
+  letter-spacing: 1px;
+  font-weight: 600;
+  -webkit-filter: brightness(200%);
+          filter: brightness(200%);
+}
+
+header .banner .btn {
+  display: block;
+  position: absolute;
+  left: 35%;
+  top: 42%;
+}
+
+header .banner .btn a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #FF843E;
+  background: rgba(255, 132, 62, 0.7);
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  border-radius: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  text-transform: uppercase;
+  margin: 0px 7px;
+}
+
+header .banner .btn a:hover {
+  background: #FF843E;
 }
 
 header .menu-icon {
@@ -132,7 +200,7 @@ header .menu-icon {
 }
 
 .title h4 {
-  font-size: 27px;
+  font-size: 25px;
   width: 280px !important;
 }
 
@@ -144,15 +212,123 @@ header .menu-icon {
       flex-shrink: 3;
 }
 
+.newsletter {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 70px auto;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.newsletter .item {
+  width: 350px;
+}
+
+.newsletter .item .item-image-wrapper {
+  overflow: hidden;
+  width: 350px;
+}
+
+.newsletter .item .item-image-wrapper .item-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  height: 200px;
+  width: 350px;
+}
+
+.newsletter .item .item-image-wrapper .item-image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.6;
+}
+
+.newsletter .item .item-title {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.newsletter .item .item-title a {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.newsletter .item .item-title p {
+  margin: 10px 0;
+  color: #c0c7c9;
+}
+
+.newsletter .item-1 .item-image {
+  background-image: url(../image/html.jpg);
+}
+
+.newsletter .item-2 .item-image {
+  background-image: url(../image/html/58ad5f74-7292-47c7-a320-a41e9ca3070f.png);
+}
+
+.newsletter .item-3 .item-image {
+  background-image: url(../image/css/hoc-lap-trinh-css-1024x576.jpg);
+}
+
+.newsletter .item-4 .item-image {
+  background-image: url(../image/js/javascript-la-gi-bat-dau-code.png);
+}
+
+.newsletter .item-5 .item-image {
+  background-image: url(../image/html-and-css-crash-course-2-638.jpg);
+}
+
+.newsletter .item-6 .item-image {
+  background-image: url(../image/css/khac-biet-giua-style-css-inline-external-internal.jpg);
+}
+
+.nav {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav button {
+  padding: 4px 20px;
+  margin: 3px;
+  font-size: 16px;
+  border: 1px solid #FF843E;
+  background: #FF843E;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 5px;
+}
+
+.nav button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav button:hover {
+  background: rgba(255, 132, 62, 0.7);
+}
+
+.nav p {
+  margin-top: 20px;
+}
+
 .content {
   width: 80%;
   min-height: 100vh;
   margin: auto;
-  padding-bottom: 60px;
 }
 
 .content .html, .content .css, .content .js {
-  overflow: hidden;
   position: relative;
   margin: 60px 0;
   -webkit-transition: 0.4s;
@@ -160,6 +336,7 @@ header .menu-icon {
 }
 
 .content .html .img-html, .content .css .img-html, .content .js .img-html {
+  overflow: hidden;
   left: 0;
 }
 
@@ -168,12 +345,14 @@ header .menu-icon {
      object-fit: cover;
   width: 100%;
   margin-left: -15px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .content .html .img-html img:hover, .content .css .img-html img:hover, .content .js .img-html img:hover {
-  opacity: 0.8;
-  -webkit-filter: grayscale(20%);
-          filter: grayscale(20%);
+  opacity: 0.6;
+  -webkit-filter: grayscale(40%);
+          filter: grayscale(40%);
 }
 
 .content .html .html-description, .content .css .html-description, .content .js .html-description {
@@ -186,7 +365,7 @@ header .menu-icon {
 }
 
 .content .html .html-description a, .content .css .html-description a, .content .js .html-description a {
-  color: #000;
+  color: #fff;
 }
 
 .content .html .html-description h2, .content .css .html-description h2, .content .js .html-description h2 {
@@ -195,27 +374,38 @@ header .menu-icon {
   margin-bottom: 20px;
 }
 
+.content .html .html-description p, .content .css .html-description p, .content .js .html-description p {
+  color: #c0c7c9;
+}
+
+.content .html .html-description p i, .content .css .html-description p i, .content .js .html-description p i {
+  margin-right: 10px;
+}
+
 .content .html .html-description button, .content .css .html-description button, .content .js .html-description button {
   position: absolute;
   right: 0;
   bottom: 0;
-  border: 1px solid #FF843E;
+  border: 1px solid #000;
   padding: 8px 16px;
   font-size: 17px;
-  color: #FF843E;
-  background: #fff;
+  color: #fff;
+  background: #FF843E;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
+.content .html .html-description button i, .content .css .html-description button i, .content .js .html-description button i {
+  margin-left: 5px;
+}
+
 .content .html .html-description button:hover, .content .css .html-description button:hover, .content .js .html-description button:hover {
-  color: #fff;
-  background: #FF843E;
+  background: #e66921;
 }
 
 .content .html:hover, .content .css:hover, .content .js:hover {
-  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
 }
 
 .about-us {
@@ -267,17 +457,18 @@ header .menu-icon {
 
 .about-us .hong-son .hong-son-infor {
   padding: 20px 3px;
-  background: #22848d;
+  background: #2d3436;
 }
 
 .about-us .hong-son .hong-son-infor .hong-son-contact i {
   font-size: 22px;
   padding: 7px 10px;
   cursor: pointer;
+  color: #FF843E;
 }
 
 .about-us .hong-son .hong-son-infor .hong-son-contact i:hover {
-  color: #fff;
+  color: #d68b5f;
 }
 
 .about-us .hong-son .hong-son-infor .quote {
@@ -305,17 +496,18 @@ header .menu-icon {
 
 .about-us .quang-ha .quang-ha-infor {
   padding: 20px 3px;
-  background: #22848d;
+  background: #2d3436;
 }
 
 .about-us .quang-ha .quang-ha-infor .quang-ha-contact i {
   font-size: 22px;
   padding: 7px 10px;
   cursor: pointer;
+  color: #FF843E;
 }
 
 .about-us .quang-ha .quang-ha-infor .quang-ha-contact i:hover {
-  color: #fff;
+  color: #d68b5f;
 }
 
 .about-us .quang-ha .quang-ha-infor .quote {
@@ -342,23 +534,93 @@ header .menu-icon {
 
 .about-us .thanh-do .thanh-do-infor {
   padding: 20px 3px;
-  background: #22848d;
+  background: #2d3436;
 }
 
 .about-us .thanh-do .thanh-do-infor .thanh-do-contact i {
   font-size: 22px;
   padding: 7px 10px;
   cursor: pointer;
+  color: #FF843E;
 }
 
 .about-us .thanh-do .thanh-do-infor .thanh-do-contact i:hover {
-  color: #fff;
+  color: #d68b5f;
 }
 
 .about-us .thanh-do .thanh-do-infor .quote {
   font-size: 14px;
   padding: 6px 0;
   color: #dadbe0;
+}
+
+.popup {
+  /* The popup form - hidden by default */
+  /* Add styles to the form container */
+  /* Full-width input fields */
+  /* When the inputs get focus, do something */
+  /* Set a style for the submit/login button */
+  /* Add a red background color to the cancel button */
+  /* Add some hover effects to buttons */
+}
+
+.popup .open-button {
+  background: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 8;
+}
+
+.popup .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 1px solid #000;
+  z-index: 9;
+}
+
+.popup .form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #2d3436;
+}
+
+.popup .form-container input[type=text], .popup .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.popup .form-container input[type=text]:focus, .popup .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.popup .form-container .btn {
+  background-color: #FF843E;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.popup .form-container .cancel {
+  background-color: #FF843E;
+}
+
+.popup .form-container .btn:hover, .popup .open-button:hover {
+  opacity: 1;
 }
 
 /*----------------*/
@@ -384,15 +646,22 @@ header .menu-icon {
 
 .btn-more {
   border: 1px solid #FF843E;
-  padding: 7px 16px;
-  font-size: 16px;
-  color: #fff;
-  background: #FF843E;
-  float: right;
+  padding: 7px 20px;
+  font-size: 20px;
+  background: #fff;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  border-radius: 25px;
+  color: #FF843E !important;
+  text-align: center;
+  position: absolute;
+  left: 45%;
+  margin-top: 10px;
 }
 
 .btn-more:hover {
-  background: #e46419;
+  background: #FF843E;
+  color: #fff !important;
 }
 
 .css-main, .html-main, .js-main {
@@ -424,39 +693,39 @@ header .menu-icon {
 }
 
 .css-main .css-content #khai-niem, .css-main .css-content #hoat-dong, .css-main .css-content #co-cau, .css-main .css-content #chon-nhieu-phan-tu,
-.css-main .css-content #phong-chu-va-van-ban, .css-main .css-content #loi-ket, .css-main .css-content #chuong-trinh,
+.css-main .css-content #phong-chu-va-van-ban, .css-main .css-content #loi-ket, .css-main .css-content #discussion, .css-main .css-content #chuong-trinh,
 .css-main .css-content #cac-the-thong-dung, .css-main .css-content #chuong-trinh, .css-main .css-content #cau-truc,
 .css-main .css-content #huong-dan, .css-main .css-content #nhuoc-diem, .css-main .css-content #uu-diem-va-nhuoc-diem,
 .css-main .css-content #uu-diem, .css-main .css-content #loi-ich, .css-main .css-content #ung-dung, .css-main .html-content #khai-niem, .css-main .html-content #hoat-dong, .css-main .html-content #co-cau, .css-main .html-content #chon-nhieu-phan-tu,
-.css-main .html-content #phong-chu-va-van-ban, .css-main .html-content #loi-ket, .css-main .html-content #chuong-trinh,
+.css-main .html-content #phong-chu-va-van-ban, .css-main .html-content #loi-ket, .css-main .html-content #discussion, .css-main .html-content #chuong-trinh,
 .css-main .html-content #cac-the-thong-dung, .css-main .html-content #chuong-trinh, .css-main .html-content #cau-truc,
 .css-main .html-content #huong-dan, .css-main .html-content #nhuoc-diem, .css-main .html-content #uu-diem-va-nhuoc-diem,
 .css-main .html-content #uu-diem, .css-main .html-content #loi-ich, .css-main .html-content #ung-dung, .css-main .js-content #khai-niem, .css-main .js-content #hoat-dong, .css-main .js-content #co-cau, .css-main .js-content #chon-nhieu-phan-tu,
-.css-main .js-content #phong-chu-va-van-ban, .css-main .js-content #loi-ket, .css-main .js-content #chuong-trinh,
+.css-main .js-content #phong-chu-va-van-ban, .css-main .js-content #loi-ket, .css-main .js-content #discussion, .css-main .js-content #chuong-trinh,
 .css-main .js-content #cac-the-thong-dung, .css-main .js-content #chuong-trinh, .css-main .js-content #cau-truc,
 .css-main .js-content #huong-dan, .css-main .js-content #nhuoc-diem, .css-main .js-content #uu-diem-va-nhuoc-diem,
 .css-main .js-content #uu-diem, .css-main .js-content #loi-ich, .css-main .js-content #ung-dung, .html-main .css-content #khai-niem, .html-main .css-content #hoat-dong, .html-main .css-content #co-cau, .html-main .css-content #chon-nhieu-phan-tu,
-.html-main .css-content #phong-chu-va-van-ban, .html-main .css-content #loi-ket, .html-main .css-content #chuong-trinh,
+.html-main .css-content #phong-chu-va-van-ban, .html-main .css-content #loi-ket, .html-main .css-content #discussion, .html-main .css-content #chuong-trinh,
 .html-main .css-content #cac-the-thong-dung, .html-main .css-content #chuong-trinh, .html-main .css-content #cau-truc,
 .html-main .css-content #huong-dan, .html-main .css-content #nhuoc-diem, .html-main .css-content #uu-diem-va-nhuoc-diem,
 .html-main .css-content #uu-diem, .html-main .css-content #loi-ich, .html-main .css-content #ung-dung, .html-main .html-content #khai-niem, .html-main .html-content #hoat-dong, .html-main .html-content #co-cau, .html-main .html-content #chon-nhieu-phan-tu,
-.html-main .html-content #phong-chu-va-van-ban, .html-main .html-content #loi-ket, .html-main .html-content #chuong-trinh,
+.html-main .html-content #phong-chu-va-van-ban, .html-main .html-content #loi-ket, .html-main .html-content #discussion, .html-main .html-content #chuong-trinh,
 .html-main .html-content #cac-the-thong-dung, .html-main .html-content #chuong-trinh, .html-main .html-content #cau-truc,
 .html-main .html-content #huong-dan, .html-main .html-content #nhuoc-diem, .html-main .html-content #uu-diem-va-nhuoc-diem,
 .html-main .html-content #uu-diem, .html-main .html-content #loi-ich, .html-main .html-content #ung-dung, .html-main .js-content #khai-niem, .html-main .js-content #hoat-dong, .html-main .js-content #co-cau, .html-main .js-content #chon-nhieu-phan-tu,
-.html-main .js-content #phong-chu-va-van-ban, .html-main .js-content #loi-ket, .html-main .js-content #chuong-trinh,
+.html-main .js-content #phong-chu-va-van-ban, .html-main .js-content #loi-ket, .html-main .js-content #discussion, .html-main .js-content #chuong-trinh,
 .html-main .js-content #cac-the-thong-dung, .html-main .js-content #chuong-trinh, .html-main .js-content #cau-truc,
 .html-main .js-content #huong-dan, .html-main .js-content #nhuoc-diem, .html-main .js-content #uu-diem-va-nhuoc-diem,
 .html-main .js-content #uu-diem, .html-main .js-content #loi-ich, .html-main .js-content #ung-dung, .js-main .css-content #khai-niem, .js-main .css-content #hoat-dong, .js-main .css-content #co-cau, .js-main .css-content #chon-nhieu-phan-tu,
-.js-main .css-content #phong-chu-va-van-ban, .js-main .css-content #loi-ket, .js-main .css-content #chuong-trinh,
+.js-main .css-content #phong-chu-va-van-ban, .js-main .css-content #loi-ket, .js-main .css-content #discussion, .js-main .css-content #chuong-trinh,
 .js-main .css-content #cac-the-thong-dung, .js-main .css-content #chuong-trinh, .js-main .css-content #cau-truc,
 .js-main .css-content #huong-dan, .js-main .css-content #nhuoc-diem, .js-main .css-content #uu-diem-va-nhuoc-diem,
 .js-main .css-content #uu-diem, .js-main .css-content #loi-ich, .js-main .css-content #ung-dung, .js-main .html-content #khai-niem, .js-main .html-content #hoat-dong, .js-main .html-content #co-cau, .js-main .html-content #chon-nhieu-phan-tu,
-.js-main .html-content #phong-chu-va-van-ban, .js-main .html-content #loi-ket, .js-main .html-content #chuong-trinh,
+.js-main .html-content #phong-chu-va-van-ban, .js-main .html-content #loi-ket, .js-main .html-content #discussion, .js-main .html-content #chuong-trinh,
 .js-main .html-content #cac-the-thong-dung, .js-main .html-content #chuong-trinh, .js-main .html-content #cau-truc,
 .js-main .html-content #huong-dan, .js-main .html-content #nhuoc-diem, .js-main .html-content #uu-diem-va-nhuoc-diem,
 .js-main .html-content #uu-diem, .js-main .html-content #loi-ich, .js-main .html-content #ung-dung, .js-main .js-content #khai-niem, .js-main .js-content #hoat-dong, .js-main .js-content #co-cau, .js-main .js-content #chon-nhieu-phan-tu,
-.js-main .js-content #phong-chu-va-van-ban, .js-main .js-content #loi-ket, .js-main .js-content #chuong-trinh,
+.js-main .js-content #phong-chu-va-van-ban, .js-main .js-content #loi-ket, .js-main .js-content #discussion, .js-main .js-content #chuong-trinh,
 .js-main .js-content #cac-the-thong-dung, .js-main .js-content #chuong-trinh, .js-main .js-content #cau-truc,
 .js-main .js-content #huong-dan, .js-main .js-content #nhuoc-diem, .js-main .js-content #uu-diem-va-nhuoc-diem,
 .js-main .js-content #uu-diem, .js-main .js-content #loi-ich, .js-main .js-content #ung-dung {
@@ -467,39 +736,39 @@ header .menu-icon {
 }
 
 .css-main .css-content #khai-niem p, .css-main .css-content #hoat-dong p, .css-main .css-content #co-cau p, .css-main .css-content #chon-nhieu-phan-tu p,
-.css-main .css-content #phong-chu-va-van-ban p, .css-main .css-content #loi-ket p, .css-main .css-content #chuong-trinh p,
+.css-main .css-content #phong-chu-va-van-ban p, .css-main .css-content #loi-ket p, .css-main .css-content #discussion p, .css-main .css-content #chuong-trinh p,
 .css-main .css-content #cac-the-thong-dung p, .css-main .css-content #chuong-trinh p, .css-main .css-content #cau-truc p,
 .css-main .css-content #huong-dan p, .css-main .css-content #nhuoc-diem p, .css-main .css-content #uu-diem-va-nhuoc-diem p,
 .css-main .css-content #uu-diem p, .css-main .css-content #loi-ich p, .css-main .css-content #ung-dung p, .css-main .html-content #khai-niem p, .css-main .html-content #hoat-dong p, .css-main .html-content #co-cau p, .css-main .html-content #chon-nhieu-phan-tu p,
-.css-main .html-content #phong-chu-va-van-ban p, .css-main .html-content #loi-ket p, .css-main .html-content #chuong-trinh p,
+.css-main .html-content #phong-chu-va-van-ban p, .css-main .html-content #loi-ket p, .css-main .html-content #discussion p, .css-main .html-content #chuong-trinh p,
 .css-main .html-content #cac-the-thong-dung p, .css-main .html-content #chuong-trinh p, .css-main .html-content #cau-truc p,
 .css-main .html-content #huong-dan p, .css-main .html-content #nhuoc-diem p, .css-main .html-content #uu-diem-va-nhuoc-diem p,
 .css-main .html-content #uu-diem p, .css-main .html-content #loi-ich p, .css-main .html-content #ung-dung p, .css-main .js-content #khai-niem p, .css-main .js-content #hoat-dong p, .css-main .js-content #co-cau p, .css-main .js-content #chon-nhieu-phan-tu p,
-.css-main .js-content #phong-chu-va-van-ban p, .css-main .js-content #loi-ket p, .css-main .js-content #chuong-trinh p,
+.css-main .js-content #phong-chu-va-van-ban p, .css-main .js-content #loi-ket p, .css-main .js-content #discussion p, .css-main .js-content #chuong-trinh p,
 .css-main .js-content #cac-the-thong-dung p, .css-main .js-content #chuong-trinh p, .css-main .js-content #cau-truc p,
 .css-main .js-content #huong-dan p, .css-main .js-content #nhuoc-diem p, .css-main .js-content #uu-diem-va-nhuoc-diem p,
 .css-main .js-content #uu-diem p, .css-main .js-content #loi-ich p, .css-main .js-content #ung-dung p, .html-main .css-content #khai-niem p, .html-main .css-content #hoat-dong p, .html-main .css-content #co-cau p, .html-main .css-content #chon-nhieu-phan-tu p,
-.html-main .css-content #phong-chu-va-van-ban p, .html-main .css-content #loi-ket p, .html-main .css-content #chuong-trinh p,
+.html-main .css-content #phong-chu-va-van-ban p, .html-main .css-content #loi-ket p, .html-main .css-content #discussion p, .html-main .css-content #chuong-trinh p,
 .html-main .css-content #cac-the-thong-dung p, .html-main .css-content #chuong-trinh p, .html-main .css-content #cau-truc p,
 .html-main .css-content #huong-dan p, .html-main .css-content #nhuoc-diem p, .html-main .css-content #uu-diem-va-nhuoc-diem p,
 .html-main .css-content #uu-diem p, .html-main .css-content #loi-ich p, .html-main .css-content #ung-dung p, .html-main .html-content #khai-niem p, .html-main .html-content #hoat-dong p, .html-main .html-content #co-cau p, .html-main .html-content #chon-nhieu-phan-tu p,
-.html-main .html-content #phong-chu-va-van-ban p, .html-main .html-content #loi-ket p, .html-main .html-content #chuong-trinh p,
+.html-main .html-content #phong-chu-va-van-ban p, .html-main .html-content #loi-ket p, .html-main .html-content #discussion p, .html-main .html-content #chuong-trinh p,
 .html-main .html-content #cac-the-thong-dung p, .html-main .html-content #chuong-trinh p, .html-main .html-content #cau-truc p,
 .html-main .html-content #huong-dan p, .html-main .html-content #nhuoc-diem p, .html-main .html-content #uu-diem-va-nhuoc-diem p,
 .html-main .html-content #uu-diem p, .html-main .html-content #loi-ich p, .html-main .html-content #ung-dung p, .html-main .js-content #khai-niem p, .html-main .js-content #hoat-dong p, .html-main .js-content #co-cau p, .html-main .js-content #chon-nhieu-phan-tu p,
-.html-main .js-content #phong-chu-va-van-ban p, .html-main .js-content #loi-ket p, .html-main .js-content #chuong-trinh p,
+.html-main .js-content #phong-chu-va-van-ban p, .html-main .js-content #loi-ket p, .html-main .js-content #discussion p, .html-main .js-content #chuong-trinh p,
 .html-main .js-content #cac-the-thong-dung p, .html-main .js-content #chuong-trinh p, .html-main .js-content #cau-truc p,
 .html-main .js-content #huong-dan p, .html-main .js-content #nhuoc-diem p, .html-main .js-content #uu-diem-va-nhuoc-diem p,
 .html-main .js-content #uu-diem p, .html-main .js-content #loi-ich p, .html-main .js-content #ung-dung p, .js-main .css-content #khai-niem p, .js-main .css-content #hoat-dong p, .js-main .css-content #co-cau p, .js-main .css-content #chon-nhieu-phan-tu p,
-.js-main .css-content #phong-chu-va-van-ban p, .js-main .css-content #loi-ket p, .js-main .css-content #chuong-trinh p,
+.js-main .css-content #phong-chu-va-van-ban p, .js-main .css-content #loi-ket p, .js-main .css-content #discussion p, .js-main .css-content #chuong-trinh p,
 .js-main .css-content #cac-the-thong-dung p, .js-main .css-content #chuong-trinh p, .js-main .css-content #cau-truc p,
 .js-main .css-content #huong-dan p, .js-main .css-content #nhuoc-diem p, .js-main .css-content #uu-diem-va-nhuoc-diem p,
 .js-main .css-content #uu-diem p, .js-main .css-content #loi-ich p, .js-main .css-content #ung-dung p, .js-main .html-content #khai-niem p, .js-main .html-content #hoat-dong p, .js-main .html-content #co-cau p, .js-main .html-content #chon-nhieu-phan-tu p,
-.js-main .html-content #phong-chu-va-van-ban p, .js-main .html-content #loi-ket p, .js-main .html-content #chuong-trinh p,
+.js-main .html-content #phong-chu-va-van-ban p, .js-main .html-content #loi-ket p, .js-main .html-content #discussion p, .js-main .html-content #chuong-trinh p,
 .js-main .html-content #cac-the-thong-dung p, .js-main .html-content #chuong-trinh p, .js-main .html-content #cau-truc p,
 .js-main .html-content #huong-dan p, .js-main .html-content #nhuoc-diem p, .js-main .html-content #uu-diem-va-nhuoc-diem p,
 .js-main .html-content #uu-diem p, .js-main .html-content #loi-ich p, .js-main .html-content #ung-dung p, .js-main .js-content #khai-niem p, .js-main .js-content #hoat-dong p, .js-main .js-content #co-cau p, .js-main .js-content #chon-nhieu-phan-tu p,
-.js-main .js-content #phong-chu-va-van-ban p, .js-main .js-content #loi-ket p, .js-main .js-content #chuong-trinh p,
+.js-main .js-content #phong-chu-va-van-ban p, .js-main .js-content #loi-ket p, .js-main .js-content #discussion p, .js-main .js-content #chuong-trinh p,
 .js-main .js-content #cac-the-thong-dung p, .js-main .js-content #chuong-trinh p, .js-main .js-content #cau-truc p,
 .js-main .js-content #huong-dan p, .js-main .js-content #nhuoc-diem p, .js-main .js-content #uu-diem-va-nhuoc-diem p,
 .js-main .js-content #uu-diem p, .js-main .js-content #loi-ich p, .js-main .js-content #ung-dung p {
@@ -507,39 +776,39 @@ header .menu-icon {
 }
 
 .css-main .css-content #khai-niem img, .css-main .css-content #hoat-dong img, .css-main .css-content #co-cau img, .css-main .css-content #chon-nhieu-phan-tu img,
-.css-main .css-content #phong-chu-va-van-ban img, .css-main .css-content #loi-ket img, .css-main .css-content #chuong-trinh img,
+.css-main .css-content #phong-chu-va-van-ban img, .css-main .css-content #loi-ket img, .css-main .css-content #discussion img, .css-main .css-content #chuong-trinh img,
 .css-main .css-content #cac-the-thong-dung img, .css-main .css-content #chuong-trinh img, .css-main .css-content #cau-truc img,
 .css-main .css-content #huong-dan img, .css-main .css-content #nhuoc-diem img, .css-main .css-content #uu-diem-va-nhuoc-diem img,
 .css-main .css-content #uu-diem img, .css-main .css-content #loi-ich img, .css-main .css-content #ung-dung img, .css-main .html-content #khai-niem img, .css-main .html-content #hoat-dong img, .css-main .html-content #co-cau img, .css-main .html-content #chon-nhieu-phan-tu img,
-.css-main .html-content #phong-chu-va-van-ban img, .css-main .html-content #loi-ket img, .css-main .html-content #chuong-trinh img,
+.css-main .html-content #phong-chu-va-van-ban img, .css-main .html-content #loi-ket img, .css-main .html-content #discussion img, .css-main .html-content #chuong-trinh img,
 .css-main .html-content #cac-the-thong-dung img, .css-main .html-content #chuong-trinh img, .css-main .html-content #cau-truc img,
 .css-main .html-content #huong-dan img, .css-main .html-content #nhuoc-diem img, .css-main .html-content #uu-diem-va-nhuoc-diem img,
 .css-main .html-content #uu-diem img, .css-main .html-content #loi-ich img, .css-main .html-content #ung-dung img, .css-main .js-content #khai-niem img, .css-main .js-content #hoat-dong img, .css-main .js-content #co-cau img, .css-main .js-content #chon-nhieu-phan-tu img,
-.css-main .js-content #phong-chu-va-van-ban img, .css-main .js-content #loi-ket img, .css-main .js-content #chuong-trinh img,
+.css-main .js-content #phong-chu-va-van-ban img, .css-main .js-content #loi-ket img, .css-main .js-content #discussion img, .css-main .js-content #chuong-trinh img,
 .css-main .js-content #cac-the-thong-dung img, .css-main .js-content #chuong-trinh img, .css-main .js-content #cau-truc img,
 .css-main .js-content #huong-dan img, .css-main .js-content #nhuoc-diem img, .css-main .js-content #uu-diem-va-nhuoc-diem img,
 .css-main .js-content #uu-diem img, .css-main .js-content #loi-ich img, .css-main .js-content #ung-dung img, .html-main .css-content #khai-niem img, .html-main .css-content #hoat-dong img, .html-main .css-content #co-cau img, .html-main .css-content #chon-nhieu-phan-tu img,
-.html-main .css-content #phong-chu-va-van-ban img, .html-main .css-content #loi-ket img, .html-main .css-content #chuong-trinh img,
+.html-main .css-content #phong-chu-va-van-ban img, .html-main .css-content #loi-ket img, .html-main .css-content #discussion img, .html-main .css-content #chuong-trinh img,
 .html-main .css-content #cac-the-thong-dung img, .html-main .css-content #chuong-trinh img, .html-main .css-content #cau-truc img,
 .html-main .css-content #huong-dan img, .html-main .css-content #nhuoc-diem img, .html-main .css-content #uu-diem-va-nhuoc-diem img,
 .html-main .css-content #uu-diem img, .html-main .css-content #loi-ich img, .html-main .css-content #ung-dung img, .html-main .html-content #khai-niem img, .html-main .html-content #hoat-dong img, .html-main .html-content #co-cau img, .html-main .html-content #chon-nhieu-phan-tu img,
-.html-main .html-content #phong-chu-va-van-ban img, .html-main .html-content #loi-ket img, .html-main .html-content #chuong-trinh img,
+.html-main .html-content #phong-chu-va-van-ban img, .html-main .html-content #loi-ket img, .html-main .html-content #discussion img, .html-main .html-content #chuong-trinh img,
 .html-main .html-content #cac-the-thong-dung img, .html-main .html-content #chuong-trinh img, .html-main .html-content #cau-truc img,
 .html-main .html-content #huong-dan img, .html-main .html-content #nhuoc-diem img, .html-main .html-content #uu-diem-va-nhuoc-diem img,
 .html-main .html-content #uu-diem img, .html-main .html-content #loi-ich img, .html-main .html-content #ung-dung img, .html-main .js-content #khai-niem img, .html-main .js-content #hoat-dong img, .html-main .js-content #co-cau img, .html-main .js-content #chon-nhieu-phan-tu img,
-.html-main .js-content #phong-chu-va-van-ban img, .html-main .js-content #loi-ket img, .html-main .js-content #chuong-trinh img,
+.html-main .js-content #phong-chu-va-van-ban img, .html-main .js-content #loi-ket img, .html-main .js-content #discussion img, .html-main .js-content #chuong-trinh img,
 .html-main .js-content #cac-the-thong-dung img, .html-main .js-content #chuong-trinh img, .html-main .js-content #cau-truc img,
 .html-main .js-content #huong-dan img, .html-main .js-content #nhuoc-diem img, .html-main .js-content #uu-diem-va-nhuoc-diem img,
 .html-main .js-content #uu-diem img, .html-main .js-content #loi-ich img, .html-main .js-content #ung-dung img, .js-main .css-content #khai-niem img, .js-main .css-content #hoat-dong img, .js-main .css-content #co-cau img, .js-main .css-content #chon-nhieu-phan-tu img,
-.js-main .css-content #phong-chu-va-van-ban img, .js-main .css-content #loi-ket img, .js-main .css-content #chuong-trinh img,
+.js-main .css-content #phong-chu-va-van-ban img, .js-main .css-content #loi-ket img, .js-main .css-content #discussion img, .js-main .css-content #chuong-trinh img,
 .js-main .css-content #cac-the-thong-dung img, .js-main .css-content #chuong-trinh img, .js-main .css-content #cau-truc img,
 .js-main .css-content #huong-dan img, .js-main .css-content #nhuoc-diem img, .js-main .css-content #uu-diem-va-nhuoc-diem img,
 .js-main .css-content #uu-diem img, .js-main .css-content #loi-ich img, .js-main .css-content #ung-dung img, .js-main .html-content #khai-niem img, .js-main .html-content #hoat-dong img, .js-main .html-content #co-cau img, .js-main .html-content #chon-nhieu-phan-tu img,
-.js-main .html-content #phong-chu-va-van-ban img, .js-main .html-content #loi-ket img, .js-main .html-content #chuong-trinh img,
+.js-main .html-content #phong-chu-va-van-ban img, .js-main .html-content #loi-ket img, .js-main .html-content #discussion img, .js-main .html-content #chuong-trinh img,
 .js-main .html-content #cac-the-thong-dung img, .js-main .html-content #chuong-trinh img, .js-main .html-content #cau-truc img,
 .js-main .html-content #huong-dan img, .js-main .html-content #nhuoc-diem img, .js-main .html-content #uu-diem-va-nhuoc-diem img,
 .js-main .html-content #uu-diem img, .js-main .html-content #loi-ich img, .js-main .html-content #ung-dung img, .js-main .js-content #khai-niem img, .js-main .js-content #hoat-dong img, .js-main .js-content #co-cau img, .js-main .js-content #chon-nhieu-phan-tu img,
-.js-main .js-content #phong-chu-va-van-ban img, .js-main .js-content #loi-ket img, .js-main .js-content #chuong-trinh img,
+.js-main .js-content #phong-chu-va-van-ban img, .js-main .js-content #loi-ket img, .js-main .js-content #discussion img, .js-main .js-content #chuong-trinh img,
 .js-main .js-content #cac-the-thong-dung img, .js-main .js-content #chuong-trinh img, .js-main .js-content #cau-truc img,
 .js-main .js-content #huong-dan img, .js-main .js-content #nhuoc-diem img, .js-main .js-content #uu-diem-va-nhuoc-diem img,
 .js-main .js-content #uu-diem img, .js-main .js-content #loi-ich img, .js-main .js-content #ung-dung img {
@@ -547,15 +816,142 @@ header .menu-icon {
   margin-bottom: 30px;
 }
 
-.css-main .css-sidebar, .css-main .html-sidebar, .css-main .js-sidebar, .html-main .css-sidebar, .html-main .html-sidebar, .html-main .js-sidebar, .js-main .css-sidebar, .js-main .html-sidebar, .js-main .js-sidebar {
-  width: 30%;
-  margin-top: 120px;
-  padding: 25px 0;
+.css-main .css-content #khai-niem a, .css-main .css-content #hoat-dong a, .css-main .css-content #co-cau a, .css-main .css-content #chon-nhieu-phan-tu a,
+.css-main .css-content #phong-chu-va-van-ban a, .css-main .css-content #loi-ket a, .css-main .css-content #discussion a, .css-main .css-content #chuong-trinh a,
+.css-main .css-content #cac-the-thong-dung a, .css-main .css-content #chuong-trinh a, .css-main .css-content #cau-truc a,
+.css-main .css-content #huong-dan a, .css-main .css-content #nhuoc-diem a, .css-main .css-content #uu-diem-va-nhuoc-diem a,
+.css-main .css-content #uu-diem a, .css-main .css-content #loi-ich a, .css-main .css-content #ung-dung a, .css-main .html-content #khai-niem a, .css-main .html-content #hoat-dong a, .css-main .html-content #co-cau a, .css-main .html-content #chon-nhieu-phan-tu a,
+.css-main .html-content #phong-chu-va-van-ban a, .css-main .html-content #loi-ket a, .css-main .html-content #discussion a, .css-main .html-content #chuong-trinh a,
+.css-main .html-content #cac-the-thong-dung a, .css-main .html-content #chuong-trinh a, .css-main .html-content #cau-truc a,
+.css-main .html-content #huong-dan a, .css-main .html-content #nhuoc-diem a, .css-main .html-content #uu-diem-va-nhuoc-diem a,
+.css-main .html-content #uu-diem a, .css-main .html-content #loi-ich a, .css-main .html-content #ung-dung a, .css-main .js-content #khai-niem a, .css-main .js-content #hoat-dong a, .css-main .js-content #co-cau a, .css-main .js-content #chon-nhieu-phan-tu a,
+.css-main .js-content #phong-chu-va-van-ban a, .css-main .js-content #loi-ket a, .css-main .js-content #discussion a, .css-main .js-content #chuong-trinh a,
+.css-main .js-content #cac-the-thong-dung a, .css-main .js-content #chuong-trinh a, .css-main .js-content #cau-truc a,
+.css-main .js-content #huong-dan a, .css-main .js-content #nhuoc-diem a, .css-main .js-content #uu-diem-va-nhuoc-diem a,
+.css-main .js-content #uu-diem a, .css-main .js-content #loi-ich a, .css-main .js-content #ung-dung a, .html-main .css-content #khai-niem a, .html-main .css-content #hoat-dong a, .html-main .css-content #co-cau a, .html-main .css-content #chon-nhieu-phan-tu a,
+.html-main .css-content #phong-chu-va-van-ban a, .html-main .css-content #loi-ket a, .html-main .css-content #discussion a, .html-main .css-content #chuong-trinh a,
+.html-main .css-content #cac-the-thong-dung a, .html-main .css-content #chuong-trinh a, .html-main .css-content #cau-truc a,
+.html-main .css-content #huong-dan a, .html-main .css-content #nhuoc-diem a, .html-main .css-content #uu-diem-va-nhuoc-diem a,
+.html-main .css-content #uu-diem a, .html-main .css-content #loi-ich a, .html-main .css-content #ung-dung a, .html-main .html-content #khai-niem a, .html-main .html-content #hoat-dong a, .html-main .html-content #co-cau a, .html-main .html-content #chon-nhieu-phan-tu a,
+.html-main .html-content #phong-chu-va-van-ban a, .html-main .html-content #loi-ket a, .html-main .html-content #discussion a, .html-main .html-content #chuong-trinh a,
+.html-main .html-content #cac-the-thong-dung a, .html-main .html-content #chuong-trinh a, .html-main .html-content #cau-truc a,
+.html-main .html-content #huong-dan a, .html-main .html-content #nhuoc-diem a, .html-main .html-content #uu-diem-va-nhuoc-diem a,
+.html-main .html-content #uu-diem a, .html-main .html-content #loi-ich a, .html-main .html-content #ung-dung a, .html-main .js-content #khai-niem a, .html-main .js-content #hoat-dong a, .html-main .js-content #co-cau a, .html-main .js-content #chon-nhieu-phan-tu a,
+.html-main .js-content #phong-chu-va-van-ban a, .html-main .js-content #loi-ket a, .html-main .js-content #discussion a, .html-main .js-content #chuong-trinh a,
+.html-main .js-content #cac-the-thong-dung a, .html-main .js-content #chuong-trinh a, .html-main .js-content #cau-truc a,
+.html-main .js-content #huong-dan a, .html-main .js-content #nhuoc-diem a, .html-main .js-content #uu-diem-va-nhuoc-diem a,
+.html-main .js-content #uu-diem a, .html-main .js-content #loi-ich a, .html-main .js-content #ung-dung a, .js-main .css-content #khai-niem a, .js-main .css-content #hoat-dong a, .js-main .css-content #co-cau a, .js-main .css-content #chon-nhieu-phan-tu a,
+.js-main .css-content #phong-chu-va-van-ban a, .js-main .css-content #loi-ket a, .js-main .css-content #discussion a, .js-main .css-content #chuong-trinh a,
+.js-main .css-content #cac-the-thong-dung a, .js-main .css-content #chuong-trinh a, .js-main .css-content #cau-truc a,
+.js-main .css-content #huong-dan a, .js-main .css-content #nhuoc-diem a, .js-main .css-content #uu-diem-va-nhuoc-diem a,
+.js-main .css-content #uu-diem a, .js-main .css-content #loi-ich a, .js-main .css-content #ung-dung a, .js-main .html-content #khai-niem a, .js-main .html-content #hoat-dong a, .js-main .html-content #co-cau a, .js-main .html-content #chon-nhieu-phan-tu a,
+.js-main .html-content #phong-chu-va-van-ban a, .js-main .html-content #loi-ket a, .js-main .html-content #discussion a, .js-main .html-content #chuong-trinh a,
+.js-main .html-content #cac-the-thong-dung a, .js-main .html-content #chuong-trinh a, .js-main .html-content #cau-truc a,
+.js-main .html-content #huong-dan a, .js-main .html-content #nhuoc-diem a, .js-main .html-content #uu-diem-va-nhuoc-diem a,
+.js-main .html-content #uu-diem a, .js-main .html-content #loi-ich a, .js-main .html-content #ung-dung a, .js-main .js-content #khai-niem a, .js-main .js-content #hoat-dong a, .js-main .js-content #co-cau a, .js-main .js-content #chon-nhieu-phan-tu a,
+.js-main .js-content #phong-chu-va-van-ban a, .js-main .js-content #loi-ket a, .js-main .js-content #discussion a, .js-main .js-content #chuong-trinh a,
+.js-main .js-content #cac-the-thong-dung a, .js-main .js-content #chuong-trinh a, .js-main .js-content #cau-truc a,
+.js-main .js-content #huong-dan a, .js-main .js-content #nhuoc-diem a, .js-main .js-content #uu-diem-va-nhuoc-diem a,
+.js-main .js-content #uu-diem a, .js-main .js-content #loi-ich a, .js-main .js-content #ung-dung a {
+  color: #fff;
 }
 
-.css-main h3, .html-main h3, .js-main h3 {
+.css-main .css-content .discussion .figure, .css-main .html-content .discussion .figure, .css-main .js-content .discussion .figure, .html-main .css-content .discussion .figure, .html-main .html-content .discussion .figure, .html-main .js-content .discussion .figure, .js-main .css-content .discussion .figure, .js-main .html-content .discussion .figure, .js-main .js-content .discussion .figure {
+  position: relative;
+  left: 30px;
+}
+
+.css-main .css-content .discussion .figure h5, .css-main .html-content .discussion .figure h5, .css-main .js-content .discussion .figure h5, .html-main .css-content .discussion .figure h5, .html-main .html-content .discussion .figure h5, .html-main .js-content .discussion .figure h5, .js-main .css-content .discussion .figure h5, .js-main .html-content .discussion .figure h5, .js-main .js-content .discussion .figure h5 {
+  margin: 20px auto;
+}
+
+.css-main .css-content .discussion .figure .figure-image, .css-main .html-content .discussion .figure .figure-image, .css-main .js-content .discussion .figure .figure-image, .html-main .css-content .discussion .figure .figure-image, .html-main .html-content .discussion .figure .figure-image, .html-main .js-content .discussion .figure .figure-image, .js-main .css-content .discussion .figure .figure-image, .js-main .html-content .discussion .figure .figure-image, .js-main .js-content .discussion .figure .figure-image {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.css-main .css-content .discussion .figure .discussion-figure, .css-main .html-content .discussion .figure .discussion-figure, .css-main .js-content .discussion .figure .discussion-figure, .html-main .css-content .discussion .figure .discussion-figure, .html-main .html-content .discussion .figure .discussion-figure, .html-main .js-content .discussion .figure .discussion-figure, .js-main .css-content .discussion .figure .discussion-figure, .js-main .html-content .discussion .figure .discussion-figure, .js-main .js-content .discussion .figure .discussion-figure {
+  margin-bottom: 40px;
+}
+
+.css-main .css-content .discussion .figure .figure-infor, .css-main .html-content .discussion .figure .figure-infor, .css-main .js-content .discussion .figure .figure-infor, .html-main .css-content .discussion .figure .figure-infor, .html-main .html-content .discussion .figure .figure-infor, .html-main .js-content .discussion .figure .figure-infor, .js-main .css-content .discussion .figure .figure-infor, .js-main .html-content .discussion .figure .figure-infor, .js-main .js-content .discussion .figure .figure-infor {
+  margin-top: -35px;
+  margin-left: 70px;
+  font-size: 14px;
+}
+
+.css-main .css-content .discussion .figure .figure-infor span, .css-main .html-content .discussion .figure .figure-infor span, .css-main .js-content .discussion .figure .figure-infor span, .html-main .css-content .discussion .figure .figure-infor span, .html-main .html-content .discussion .figure .figure-infor span, .html-main .js-content .discussion .figure .figure-infor span, .js-main .css-content .discussion .figure .figure-infor span, .js-main .html-content .discussion .figure .figure-infor span, .js-main .js-content .discussion .figure .figure-infor span {
+  color: #FF843E;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.css-main .css-content .discussion .figure button, .css-main .html-content .discussion .figure button, .css-main .js-content .discussion .figure button, .html-main .css-content .discussion .figure button, .html-main .html-content .discussion .figure button, .html-main .js-content .discussion .figure button, .js-main .css-content .discussion .figure button, .js-main .html-content .discussion .figure button, .js-main .js-content .discussion .figure button {
+  border: 1px solid #FF843E;
+  height: 30px;
+  letter-spacing: 1px;
+  color: #FF843E;
+  width: 70px;
+  background: #fff;
+  margin-left: 100px;
+}
+
+.css-main .css-content .discussion .figure button:hover, .css-main .html-content .discussion .figure button:hover, .css-main .js-content .discussion .figure button:hover, .html-main .css-content .discussion .figure button:hover, .html-main .html-content .discussion .figure button:hover, .html-main .js-content .discussion .figure button:hover, .js-main .css-content .discussion .figure button:hover, .js-main .html-content .discussion .figure button:hover, .js-main .js-content .discussion .figure button:hover {
+  color: #fff;
+  background: #FF843E;
+}
+
+.css-main .css-content .discussion .figure .figure-comment, .css-main .html-content .discussion .figure .figure-comment, .css-main .js-content .discussion .figure .figure-comment, .html-main .css-content .discussion .figure .figure-comment, .html-main .html-content .discussion .figure .figure-comment, .html-main .js-content .discussion .figure .figure-comment, .js-main .css-content .discussion .figure .figure-comment, .js-main .html-content .discussion .figure .figure-comment, .js-main .js-content .discussion .figure .figure-comment {
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+
+.css-main .css-content .discussion .figure input, .css-main .html-content .discussion .figure input, .css-main .js-content .discussion .figure input, .html-main .css-content .discussion .figure input, .html-main .html-content .discussion .figure input, .html-main .js-content .discussion .figure input, .js-main .css-content .discussion .figure input, .js-main .html-content .discussion .figure input, .js-main .js-content .discussion .figure input {
+  width: 100%;
+  height: 40px;
+}
+
+.css-main .css-content .discussion .figure i, .css-main .html-content .discussion .figure i, .css-main .js-content .discussion .figure i, .html-main .css-content .discussion .figure i, .html-main .html-content .discussion .figure i, .html-main .js-content .discussion .figure i, .js-main .css-content .discussion .figure i, .js-main .html-content .discussion .figure i, .js-main .js-content .discussion .figure i {
+  font-size: 25px;
+  margin: 20px 10px 20px 0;
+}
+
+.css-main .css-content .discussion .figure .fa-facebook, .css-main .html-content .discussion .figure .fa-facebook, .css-main .js-content .discussion .figure .fa-facebook, .html-main .css-content .discussion .figure .fa-facebook, .html-main .html-content .discussion .figure .fa-facebook, .html-main .js-content .discussion .figure .fa-facebook, .js-main .css-content .discussion .figure .fa-facebook, .js-main .html-content .discussion .figure .fa-facebook, .js-main .js-content .discussion .figure .fa-facebook {
+  color: #139FF8;
+}
+
+.css-main .css-content .discussion .figure .fa-google-plus, .css-main .html-content .discussion .figure .fa-google-plus, .css-main .js-content .discussion .figure .fa-google-plus, .html-main .css-content .discussion .figure .fa-google-plus, .html-main .html-content .discussion .figure .fa-google-plus, .html-main .js-content .discussion .figure .fa-google-plus, .js-main .css-content .discussion .figure .fa-google-plus, .js-main .html-content .discussion .figure .fa-google-plus, .js-main .js-content .discussion .figure .fa-google-plus {
+  color: #d17225;
+}
+
+.css-main .css-content .discussion-figure .quang-ha, .css-main .html-content .discussion-figure .quang-ha, .css-main .js-content .discussion-figure .quang-ha, .html-main .css-content .discussion-figure .quang-ha, .html-main .html-content .discussion-figure .quang-ha, .html-main .js-content .discussion-figure .quang-ha, .js-main .css-content .discussion-figure .quang-ha, .js-main .html-content .discussion-figure .quang-ha, .js-main .js-content .discussion-figure .quang-ha {
+  background-image: url(../image/72B10D62-3FDA-4ED0-8594-071ABFE4E073.JPG);
+}
+
+.css-main .css-content .discussion-figure .van-ti, .css-main .html-content .discussion-figure .van-ti, .css-main .js-content .discussion-figure .van-ti, .html-main .css-content .discussion-figure .van-ti, .html-main .html-content .discussion-figure .van-ti, .html-main .js-content .discussion-figure .van-ti, .js-main .css-content .discussion-figure .van-ti, .js-main .html-content .discussion-figure .van-ti, .js-main .js-content .discussion-figure .van-ti {
+  background-image: url(../image/IMG_2075.JPG);
+}
+
+.css-main .css-sidebar, .css-main .html-sidebar, .css-main .js-sidebar, .html-main .css-sidebar, .html-main .html-sidebar, .html-main .js-sidebar, .js-main .css-sidebar, .js-main .html-sidebar, .js-main .js-sidebar {
+  width: 30%;
+  margin-top: 70px;
+  z-index: 0;
+  top: 50px;
+  right: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.css-main h4, .html-main h4, .js-main h4 {
   margin-left: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
   color: #fff;
 }
 
@@ -578,7 +974,7 @@ header .menu-icon {
 .html-main .js-sidebar--list-menu li, .js-main .css-sidebar--list-menu li, .js-main .html-sidebar--list-menu li,
 .js-main .js-sidebar--list-menu li {
   list-style: square;
-  line-height: 40px;
+  line-height: 30px;
   color: #fff;
 }
 
@@ -593,8 +989,14 @@ header .menu-icon {
   background: #66889c;
 }
 
+.css-main .css-navigation h4, .css-main .html-navigation h4, .css-main .js-navigation h4, .html-main .css-navigation h4, .html-main .html-navigation h4, .html-main .js-navigation h4, .js-main .css-navigation h4, .js-main .html-navigation h4, .js-main .js-navigation h4 {
+  margin-left: 7px;
+  padding-top: 10px;
+  color: #fff;
+}
+
 .css-main .css-navigation li, .css-main .html-navigation li, .css-main .js-navigation li, .html-main .css-navigation li, .html-main .html-navigation li, .html-main .js-navigation li, .js-main .css-navigation li, .js-main .html-navigation li, .js-main .js-navigation li {
-  margin-left: 30px;
+  margin-left: 27px;
   list-style: upper-roman;
   color: #fff;
 }
@@ -629,9 +1031,9 @@ header .menu-icon {
 
 footer {
   width: 100%;
-  background: #244c6d;
+  background: #2d3436;
   color: #fff;
-  padding-bottom: 20px;
+  margin-top: 100px;
 }
 
 footer .contact {
@@ -697,11 +1099,12 @@ footer .links {
 
 footer .links .introduce img {
   float: left;
-  margin-top: -15px;
+  margin-top: -20px;
+  margin-right: 10px;
 }
 
 footer .links .introduce .logo h2 {
-  text-align: center;
+  text-align: left;
   font-size: 22px;
 }
 
@@ -712,17 +1115,20 @@ footer .links .introduce p {
 }
 
 footer .links .navigation-link {
-  text-align: center;
+  padding-left: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-footer .links .navigation-link h2 {
+footer .links .navigation-link h4 {
   font-size: 22px;
   line-height: none;
+  margin-left: 40px;
 }
 
 footer .links .navigation-link li {
   list-style: none;
-  text-align: center;
+  text-align: left;
 }
 
 footer .links .navigation-link li a {
@@ -744,7 +1150,7 @@ footer .links .social-media ul {
 footer .links .social-media ul li {
   font-size: 28px;
   list-style: none;
-  padding: 10px 60px;
+  padding: 7px 50px;
   text-align: center;
   margin: 3px;
   border-radius: 5px;
@@ -797,7 +1203,8 @@ footer .links .social-media ul .gh:hover {
 }
 
 footer .links .social-media ul .instg {
-  background: #da7ca2;
+  background-image: -webkit-gradient(linear, left top, right top, from(purple), to(yellow));
+  background-image: linear-gradient(90deg, purple, yellow);
 }
 
 footer .links .social-media ul .instg i {
@@ -805,8 +1212,8 @@ footer .links .social-media ul .instg i {
 }
 
 footer .links .social-media ul .instg:hover {
-  background-image: -webkit-gradient(linear, left top, right top, from(purple), to(yellow));
-  background-image: linear-gradient(90deg, purple, yellow);
+  background-image: -webkit-gradient(linear, left top, right top, from(#9c199c), to(#dddd6c));
+  background-image: linear-gradient(90deg, #9c199c, #dddd6c);
 }
 
 h6 {
@@ -817,12 +1224,11 @@ h6 {
   text-align: center;
   height: 50px;
   line-height: 50px;
-  background: #245277;
+  background: #2e2b2b;
 }
 
 @media screen and (max-width: 1240px) {
   header .logo {
-    background: #34495e;
     -webkit-box-shadow: none;
             box-shadow: none;
     margin-top: 12px;

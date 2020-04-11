@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>My Blog</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+               
+                
+                <img src="image/logo-ideal.png" alt="First Step" width="55px" >
+                <p> IDEA  <i class="fas fa-exclamation"></i></p>
+
+            </div>
+            <div class="list-menu">
+                <ul>
+                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a  href="sccStyle.html">HTML</a></li>
+                    <li><a href="./sccStyle.html">CSS</a></li>
+                    <li><a  href="jsStyle.html">Javascript</a></li>
+                    <li><a style="color: #FF843E;" href="#">Thư viện</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Bootstrap</a></li>
+                            <li><a href="#">JQuery</a></li>
+                            <li><a href="#">AJAX</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Tài liệu</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Hosting</a></li>
+                            <li><a href="#">Domain</a></li>
+                            <li><a href="#">SQL sever</a></li>
+                        </ul>
+                    </li>
+                        
+                </ul>
+
+                <div class="input-field">
+                    <input type="text" placeholder="  Tìm kiếm...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                
+                  <div class="menu-icon"><i class="fas fa-bars"></i></div>
+            </div>
+        </header>
+    </div>
+
+
+
+    <div class="d-flex flex-wrap html-main">
+
+        <!-- content -->
+        <div class="html-content">
+            <div class="html-header">
+                <div class="html-header--title">
+                    <h2>Vai trò HTML, CSS và JavaScript trong việc xây dựng website</h2>
+                    <div class="html-header--sub-content">
+                        <p class="time">01/04/2020 - Quang Hà</p>
+                    </div>
+                </div>
+                <img src="./image/e9441bca-6edd-4a94-87ee-6860cc752d5c.png" alt="">
+            </div>
+            <div id="khai-niem" class="container-fluid" >
+                <h4><a href="#collapse-1" data-toggle="collapse">I. Ngôn ngữ lập trình là gì? </a></h4>
+                <p>Vậy rốt cuộc HTML là gì ?</p>
+                <img style="margin-left: 30px; margin-top: 10px;" src="./image/html.jpg" alt="">
+                <div id="collapse-1" class="collapse show">
+                    <p>Lập trình HTML, CSS hay JavaScript là một trong những mã hóa không thể thiếu để tạo ra một trang web. Nhưng vai trò và nhiệm vụ của chúng là gì? Có thể nhiều bạn trong số chúng ta đã nắm chắc điều này. Nhưng chúng tôi muốn chắc chắn rằng những bạn mới bắt đầu với lập trình web cũng phải hiểu điều này. Vì vậy trong bài viết này chúng tôi sẽ chia sẻ với các bạn  về vai trò của lập trình HTML, CSS và JavaScript trong việc xây dựng website. </p>
+                    <p>Ngôn ngữ lập trình là một tập con của ngôn ngữ máy tính. Nó được thiết kế và chuẩn hóa để truyền các chỉ thị cho các máy có bộ xử lý (CPU),  hay nói riêng là máy tính. Hay nói cách khác ngôn ngữ lập trình là dạng ngôn ngữ được chuẩn hóa theo một hệ thống các quy tắc riêng, sao cho qua đó người lập trình có thể mô tả các chương trình làm việc dành cho thiết bị điện tử mà cả con người và các thiết bị đó đều hiểu được. Bạn có thể hiểu đơn giản ngôn ngữ lập trình là thành phần để chúng ta xây dựng nên phần mềm hay ứng dụng để giúp con người giao tiếp hay ra lệnh được cho phần cứng máy tính. Và những người lập trình thường ví von rằng lập trình hay mã hóa giống như đang giải một câu đố.</p>
+                    <p>Tuy nhiên những người bắt đầu lại thật sự không hiểu hết nhiều thứ về lập trình web. Ví dụ như là về ngôn ngữ lập trình. Trong bài viết này sẽ đề cập đến với các bạn vài trò của các nền tảng lập trình cơ bản như HTML, CSS, JavaScript trong việc xây dựng website.</p>
+                </div>
+            </div>
+            <div id="cau-truc" class="container-fluid" >
+                <h4><a href="#collapse-2" data-toggle="collapse">II. Vai trò của lập trình HTML, CSS và JavaScript trong việc xây dựng website </a></h4>
+                <img src="./image/html-and-css-crash-course-2-638.jpg" alt="">
+                <div id="collapse-2" class="collapse show">
+                    <p>HTML (HyperText Markup Language – Ngôn ngữ đánh dấu siêu văn bản) là một ngôn ngữ đánh dấu được thiết kế ra để tạo nên các trang web với các mẩu thông tin được trình bày trên World Wide Web. Cùng với CSS và JavaScript, HTML tạo ra bộ ba nền tảng kỹ thuật cho các website.</p>
+                    <p>HTML là cốt lõi của mọi trang web. Bất kể sự phức tạp của một trang web hoặc số lượng công nghệ liên quan. Đó là một kỹ năng thiết yếu cho bất kỳ chuyên gia web. Đó là điểm khởi đầu cho bất cứ ai học cách tạo nội dung cho web. Và thật may mắn cho những bạn mới bắt đầu là HTML rất dễ học.</p>
+                </div>
+            </div>
+
+            <div id="cau-truc" class="container-fluid" >
+                <h4><a href="#collapse-2" data-toggle="collapse">III. Khái niệm HTML </a></h4>
+                <img style="margin-left: 30px; margin-top: 10px;" src="./image/html/cong-cu-soan-thao-html-640-size-640x335-znd.jpg" alt="">
+                <div id="collapse-2" class="collapse show">
+                    <p>Để đi sâu và từng vấn đề các bạn có thể có một cái nhìn tổng quan như sau:</p>
+                    <p>- HTML cung cấp cấu trúc cơ bản của các trang web, được cải tiến và sửa đổi bởi các công nghệ khác như CSS và JavaScript.</p>
+                    <p>- CSS được sử dụng để kiểm soát trình bày, định dạng và bố cục .</p>
+                    <p>- JavaScript được sử dụng để kiểm soát hành vi của các yếu tố khác nhau.</p>
+                    <p>Bây giờ, chúng ta hãy đi qua từng yếu tố để giúp bạn hiểu vai trò của chúng trên một trang web và sau đó chúng tôi sẽ đề cập đến cách chúng phù hợp với nhau.</p>
+                </div>
+            </div>
+
+            <div id="cau-truc" class="container-fluid" >
+                <h4><a href="#collapse-2" data-toggle="collapse">IV. Khái niệm CSS </a></h4>
+                <img style="margin-left: 30px; margin-top: 10px;" src="./image/css/khac-biet-giua-style-css-inline-external-internal.jpg" alt="">
+                <div id="collapse-2" class="collapse show">
+                    <p>CSS là viết tắt của Cascading Style Sheets. Ngôn ngữ lập trình này chỉ ra cách các yếu tố HTML của trang web thực sự sẽ xuất hiện trên giao diện của trang. Nếu HTML cung cấp các công cụ thô cần thiết để cấu trúc nội dung trên một trang web thì CSS sẽ giúp định hình kiểu nội dung này để trang web xuất hiện trước người dùng theo một cách đẹp hơn. Bạn có thể hiểu là nếu HTML là tường gạch thô thì CSS là sơn để trang trí cho tường gạch đó. Các ngôn ngữ này được giữ riêng biệt để đảm bảo các trang web được xây dựng chính xác trước khi chúng được định dạng lại.</p>
+                    <p>Trong khi HTML là cấu trúc cơ bản của trang web của bạn. CSS mang lại cho trang web của bạn phong cách mà bạn muốn.  Những màu sắc đặc trưng, font chữ phù hợp, và hình ảnh nền của website? Tất cả là nhờ CSS. CSS gần như tạo nên bộ mặt của một website. Và nếu trang web của bạn ưa nhìn thì nó sẽ hấp dẫn và lôi cuốn được người dùng phải không.</p>
+                </div>
+            </div>
+
+            <div id="cau-truc" class="container-fluid" >
+                <h4><a href="#collapse-2" data-toggle="collapse">V. Khái niệm JavaScript </a></h4>
+                <img style="margin-left: 30px; margin-top: 10px;" src="./image/js/0_cZMay_yxiJQTEZtm.jpg" alt="">
+                <div id="collapse-2" class="collapse show">
+                    <p>JavaScript là ngôn ngữ phức tạp hơn HTML hay CSS. Và nó không được phát hành ở dạng beta cho đến năm 1995. Ngày nay, JavaScript được hỗ trợ bởi tất cả các trình duyệt web hiện đại. Và được sử dụng trên hầu hết mọi trang web trên web để có chức năng mạnh mẽ và phức tạp hơn.</p>
+                    <p>Trong khi HTML là cấu trúc cơ bản của trang web của bạn. CSS mang lại cho trang web của bạn phong cách mà bạn muốn.  Những màu sắc đặc trưng, font chữ phù hợp, và hình ảnh nền của website? Tất cả là nhờ CSS. CSS gần như tạo nên bộ mặt của một website. Và nếu trang web của bạn ưa nhìn thì nó sẽ hấp dẫn và lôi cuốn được người dùng phải không.</p>
+                </div>
+            </div>
+
+            <div class="discussion" id="discussion" class="container-fluid" >
+                <h4><a href="#collapse" type="button" data-toggle="collapse"  class="active">VI. Thảo luận </a> </h4>
+                <div id="collapse" class="collapse show figure">
+                    <h5>2 Comments</h5>
+                    <div class="discussion-figure">
+                        <div class="figure-image quang-ha">
+                        
+                        </div >
+                        <div class="figure-infor">
+                            <span>Quang Hà</span> / 14-04-2020 @ 12:47 pm <button>Reply</button>
+                        </div>
+                      
+                        <div class="figure-comment">
+                            Bài viết hay quá admin ơi, ra thêm nhiều bài viết như thế nãy nữa nhé !!!
+                        </div>
+                    </div>
+
+                    <div class="discussion-figure ">
+                        <div class="figure-image van-ti">
+                        
+                        </div>
+                        <div class="figure-infor">
+                            <span>Hà Quang</span> / 10-04-2020 @ 02:32 am <button>Reply</button>
+                        </div>
+                      
+                        <div class="figure-comment">
+                            Bao giờ mới ra tiếp bài mới vậy ad ơi, hóng quá ạ...
+                        </div>
+                    </div>
+
+                    <h5>Bình luận</h5>
+                    <input type="text" placeholder=" Để lại ý kiến ...">
+                    <span><i class="fab fa-facebook "></i></span>
+                    <span><i class="fab fa-google-plus"></i></span>
+                </div>
+            </div>  
+            
+            
+
+            <button class="btn-more" type="button" style="margin-right: 40px;">Bài tiếp theo... <i class="fas fa-angle-double-right"></i></button>
+        </div>
+
+        <!-- side bar -->
+        <div class="html-sidebar">
+            <div class="html-sidebar--list-menu">
+                <h4>Các bài viết</h4>
+                <ul>
+                    <li><a href="./sccStyle.html">HTML là gì? Vì sao nó quan trọng?</a></li>
+                    <li><a href="#">Giới thiệu về HTML</a></li>
+                    <li><a href="#">Cú pháp HTML5 cơ bản</a></li>
+                    <li><a href="#">Thuộc tính và sự kiện trong HTML</a></li>
+                    <li><a href="#">Các thẻ cũ trong HTML5</a></li>
+                    <li><a href="#">Các thẻ mới trong HTML5</a></li>
+                    <li><a href="#">HTML5 nâng cao</a></li>
+                    
+                </ul>
+            </div>
+    
+            <div class="html-navigation navbar ">
+                <h4>Danh mục bài viết</h4>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <!-- <a class="nav-link" href="#khai-niem">Khái niệm</a> -->
+                      <a href="#khai-niem" class="nav-link">Khai niem</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cau-truc" >Cấu trúc một đoạn HTML</a>
+                      <ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#vai-tro">HTML đóng vai trò gì trong website?</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#phan-loai">Các loại Website</a>
+                          </li>
+                      </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#cac-the-thong-dung">Các thẻ thông dụng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chuong-trinh" >Dùng chương trình gì để tạo tập tin HTML?</a>
+                    </li>
+               
+                    <li class="nav-item">
+                        <a class="nav-link" href="#loi-ket">Lời kết</a>
+                      </li>
+                    
+                  </ul>
+            </div>
+    
+        </div>
+    </div>
+
+        <!--popup-->
+    <section class="popup">
+        <button class="open-button" onclick="openForm()"><img src="image/logo-message.png" alt="message" width="60px"></button>
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+            <h1>Thắc mắc?</h1>
+        
+            <label for="email"><b>Nhập câu hỏi</b></label>
+            <input type="text" placeholder="Câu hỏi..." name="email" required>
+        
+            <label for="psw"><b>Email</b></label>
+            <input type="password" placeholder="Email..." name="psw" required>
+        
+            <button type="submit" class="btn">Phản hồi</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
+            </form>
+        </div>
+    </section>
+   
+    <footer>
+        <div class="contact">
+            <div class="quote">
+                <h2>Đăng ký Emal</h2>
+                <p>Để không bỏ lỡ bất kỳ bài viết mới nhất nào</p>
+            </div>
+            <div class="input-field">
+                <input type="email" placeholder="  Nhập email...">
+                <button type="button">Đăng Ký</button>
+            </div>
+        </div>
+         <div class="links">
+            <div class="footer-content row">
+                <div class="col-sm-4 introduce">
+                    <div class="logo">
+                        <a href="#"><img src="./image/logo-ideal.png" alt="logo" width="60px"></a>
+                        <h2>IDEA <i class="fas fa-exclamation"></i></h2>
+                    </div>
+                    <br>
+                    <p>Chủ blog là một lão làng có tiếng trong ngành với gần một tháng kinh nghiệm làm việc, hi vọng những kiến thức chuyên sâu qua những bài viết sẽ giúp độc giả có một cái nhìn khái quát về ngành lập trình!</p>
+                </div>
+
+                <div class="col-sm-4 navigation-link">
+                  <h4>DANH MỤC</h4>
+                  <ul>
+                    <li><a href="#">Điều khoản</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Khóa học</a></li>
+                    <li><a href="#">Đối tác</a></li>
+                    
+                  </ul>
+                </div>
+        
+                <div class="col-sm-4 social-media">
+                  <h4>LIÊN KẾT</h4>
+                  <ul>
+                      <li class="fb"><i class="fab fa-facebook col-sm-6"></i></li>
+                      <li class="yt"><i class="fab fa-youtube col-sm-6"></i></li>
+                  </ul>
+
+                  <ul>
+                    <li class="gh"><i class="fab fa-github col-sm-6"></i></li>
+                    <li class="instg"><i class="fab fa-instagram col-sm-6"></i></li>
+                  </ul>
+             </div>
+        </div> 
+
+    </footer>
+    <div class="copy-right">
+        <h6>© 2020 Copyright Lập Trình Không Dễ</h6>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

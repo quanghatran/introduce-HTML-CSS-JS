@@ -7,7 +7,14 @@ $(document).ready(function() {
 });
 
 
-// 
+// popup
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
 // $(function() {
     
 //     // dislay or hide the menu if the user resize the window

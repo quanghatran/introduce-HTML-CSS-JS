@@ -16,9 +16,9 @@
     <div class="wrapper">
         <header>
             <div class="logo">
-                <p>LẬP TRÌNH</p>
-                <img src="./image/mdn-info2.png" alt="logo" width="60px">
-                <P>KHÔNG DỄ</P>
+                <img src="image/logo-ideal.png" alt="First Step" width="55px" >
+                <p> IDEA  <i class="fas fa-exclamation"></i></p>
+
             </div>
             <div class="list-menu">
                 <ul>
@@ -80,7 +80,7 @@
             </div>
             <div id="ung-dung" class="container-fluid" >
                 <h4><a href="#collapse-2" data-toggle="collapse">II. JavaScript dùng làm gì?</a></h4>
-                <div id="collapse-2" class="collapse">
+                <div id="collapse-2" class="collapse show">
                     <p><b>JavaScript </b> có thể được ứng dụng trong rất nhiều lĩnh vực:</p>
                     <ul>
                         <li>Lập trình website.</li>
@@ -98,7 +98,7 @@
 
             <div id="loi-ich" class="container-fluid" >
                 <h4><a href="#collapse-3" data-toggle="collapse">III. Lợi ích khi dùng JavaScript</a> </h4>
-                <div id="collapse-3" class="collapse">
+                <div id="collapse-3" class="collapse show">
                 <p>Là một ngôn ngữ lập trình phổ biến sử dụng trên 92% nền tảng website hiện nay, JavaScript đã thể hiện vai trò quan trọng với lĩnh vực này. Tầm quan trọng của nó thể hiện qua các thao tác, công dụng như:</p>
                 <ul>
                     <li>
@@ -131,10 +131,9 @@
 
             <div id="uu-diem-va-nhuoc-diem" class="container-fluid" >
                 <h4><a href="#collapse-6" data-toggle="collapse">IV. Ưu điểm và nhược điểm của JavaScript</a></h4>
-                <div id="collapse-6" class="collapse">
+                <div id="collapse-6" class="collapse show">
 
                 <div id="uu-diem" class="container-fluid" >
-                    <h5>Ưu điểm của JavaScript là gì?</h5>
                    <p>JavaScript có rất nhiều ưu điểm vượt trội hơn so với các đối thủ khác, chẳng hạn như:</p>
                    <ul>
                        <li><b>JavaScript </b> là ngôn ngữ lập trình dễ học.</li>
@@ -161,7 +160,7 @@
 
             <div id="huong-dan" class="container-fluid" >
                 <h4><a href="#collapse-7" type="button" data-toggle="collapse"  >V. Hướng dẫn viết chương trình JavaScript đầu tiên</a> </h4>
-                <div id="collapse-7" class="collapse">
+                <div id="collapse-7" class="collapse show">
                     <img src="./image/js/javascript-la-gi-bat-dau-code.png" alt="">
                     <div id="mo-va-dong" class="container-fluid" >
                         <h5>Cặp thẻ mở và thẻ đóng</h5>
@@ -196,6 +195,43 @@
                 </div>
 
             </div>
+
+            <div class="discussion" id="discussion" class="container-fluid" >
+                <h4><a href="#collapse" type="button" data-toggle="collapse"  class="active">VI. Thảo luận </a> </h4>
+                <div id="collapse" class="collapse show figure">
+                    <h5>2 Comments</h5>
+                    <div class="discussion-figure">
+                        <div class="figure-image quang-ha">
+                        
+                        </div >
+                        <div class="figure-infor">
+                            <span>Quang Hà</span> / 14-04-2020 @ 12:47 pm <button>Reply</button>
+                        </div>
+                      
+                        <div class="figure-comment">
+                            Bài viết hay quá admin ơi, ra thêm nhiều bài viết như thế nãy nữa nhé !!!
+                        </div>
+                    </div>
+
+                    <div class="discussion-figure ">
+                        <div class="figure-image van-ti">
+                        
+                        </div>
+                        <div class="figure-infor">
+                            <span>Hà Quang</span> / 10-04-2020 @ 02:32 am <button>Reply</button>
+                        </div>
+                      
+                        <div class="figure-comment">
+                            Bao giờ mới ra tiếp bài mới vậy ad ơi, hóng quá ạ...
+                        </div>
+                    </div>
+
+                    <h5>Bình luận</h5>
+                    <input type="text" placeholder=" Để lại ý kiến ...">
+                    <span><i class="fab fa-facebook "></i></span>
+                    <span><i class="fab fa-google-plus"></i></span>
+                </div>
+            </div>  
 
             <button class="btn-more" type="button" style="margin-right: 40px;">Bài tiếp theo... <i class="fas fa-angle-double-right"></i></button>
         </div>
@@ -251,7 +287,24 @@
         </div>
     </div>
 
-    
+             <!--popup-->
+   <section class="popup">
+    <button class="open-button" onclick="openForm()"><img src="image/logo-message.png" alt="message" width="60px"></button>
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Thắc mắc?</h1>
+      
+          <label for="email"><b>Nhập câu hỏi</b></label>
+          <input type="text" placeholder="Câu hỏi..." name="email" required>
+      
+          <label for="psw"><b>Email</b></label>
+          <input type="password" placeholder="Email..." name="psw" required>
+      
+          <button type="submit" class="btn">Phản hồi</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
+        </form>
+      </div>
+   </section>
    
     <footer>
         <div class="contact">
@@ -268,8 +321,8 @@
             <div class="footer-content row">
                 <div class="col-sm-4 introduce">
                     <div class="logo">
-                        <a href="#"><img src="./image/mdn-info2.png" alt="logo" width="60px"></a>
-                        <h2>LẬP TRÌNH KHÔNG DỄ</h2>
+                        <a href="#"><img src="./image/logo-ideal.png" alt="logo" width="60px"></a>
+                        <h2>IDEA <i class="fas fa-exclamation"></i></h2>
                     </div>
                     <br>
                     <p>Chủ blog là một lão làng có tiếng trong ngành với gần một tháng kinh nghiệm làm việc, hi vọng những kiến thức chuyên sâu qua những bài viết sẽ giúp độc giả có một cái nhìn khái quát về ngành lập trình!</p>
